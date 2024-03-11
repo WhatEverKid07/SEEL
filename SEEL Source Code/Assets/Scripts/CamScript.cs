@@ -17,7 +17,9 @@ public class CamScript : MonoBehaviour
 
     [Header("---Rotation---")]
     public float leftRotation;
+    public float leftRotationDown;
     public float rightRotation;
+    public float rightRotationDown;
     public float bottomRotation;
 
     private bool centre;
@@ -65,28 +67,28 @@ public class CamScript : MonoBehaviour
     public void LeftTurn()
     {
         Vector3 currentRotation = mainCam.transform.eulerAngles;
-        mainCam.transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y + leftRotation, currentRotation.z);
+        mainCam.transform.eulerAngles = new Vector3(currentRotation.x + leftRotationDown, currentRotation.y + leftRotation, currentRotation.z);
         centre = false;
         leftSide = true;
     }
     public void LeftTurn2()
     {
         Vector3 currentRotation = mainCam.transform.eulerAngles;
-        mainCam.transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y - leftRotation, currentRotation.z);
+        mainCam.transform.eulerAngles = new Vector3(currentRotation.x - leftRotationDown, currentRotation.y - leftRotation, currentRotation.z);
         leftSide = false;
         centre = true;
     }
     public void RightTurn()
     {
         Vector3 currentRotation = mainCam.transform.eulerAngles;
-        mainCam.transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y + rightRotation, currentRotation.z);
+        mainCam.transform.eulerAngles = new Vector3(currentRotation.x + rightRotationDown, currentRotation.y + rightRotation, currentRotation.z);
         centre = false;
         rightSide = true;
     }
     public void RightTurn2()
     {
         Vector3 currentRotation = mainCam.transform.eulerAngles;
-        mainCam.transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y - rightRotation, currentRotation.z);
+        mainCam.transform.eulerAngles = new Vector3(currentRotation.x - rightRotationDown, currentRotation.y - rightRotation, currentRotation.z);
         rightSide = false;
         centre = true;
     }
