@@ -286,7 +286,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &133916102
 MonoBehaviour:
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 289097612}
   - component: {fileID: 289097611}
   m_Layer: 0
-  m_Name: Person
+  m_Name: Victim 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,13 +542,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289097606}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5749, y: 634, z: -407}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 372, y: -338, z: 325}
   m_LocalScale: {x: 135.89934, y: 135.89934, z: 135.89934}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1596417689}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &289097611
 MonoBehaviour:
@@ -562,10 +562,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefeb8856a1ca8f47b51f199eb895d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn2: 1
   victimManager: {fileID: 133916102}
   waypoints:
   - {fileID: 521876580}
-  speed: 5
+  speed: 300
 --- !u!114 &289097612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,10 +579,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6860dca21cbe3445853a3d04cf8550c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn: 1
+  wonderForce: 0
   victimManager: {fileID: 133916102}
   waypoints:
   - {fileID: 1702166739}
-  speed: 5
+  speed: 300
 --- !u!1 &331456213
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +616,7 @@ Transform:
   - {fileID: 1702166739}
   - {fileID: 521876580}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &337006433
 GameObject:
@@ -1024,7 +1027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 521876580}
   m_Layer: 0
-  m_Name: SecondWaypoint1
+  m_Name: OutputWaypoint 1
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1191,7 +1194,7 @@ GameObject:
   - component: {fileID: 676835907}
   - component: {fileID: 676835906}
   m_Layer: 0
-  m_Name: test area
+  m_Name: Test Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1282,7 +1285,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -1376,7 +1379,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &833088351
 PrefabInstance:
@@ -1392,7 +1395,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9024ea6db3d48d1468f4732ca096a4fa, type: 2}
     - target: {fileID: -8679921383154817045, guid: 4ca853214d32a894fa018551c3505b74, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ca853214d32a894fa018551c3505b74, type: 3}
       propertyPath: m_LocalScale.x
@@ -1460,7 +1463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4ca853214d32a894fa018551c3505b74, type: 3}
       propertyPath: m_Name
-      value: boxout
+      value: Room
       objectReference: {fileID: 0}
     - target: {fileID: 2301128584841318132, guid: 4ca853214d32a894fa018551c3505b74, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1981,7 +1984,7 @@ GameObject:
   - component: {fileID: 1176307018}
   - component: {fileID: 1176307017}
   m_Layer: 0
-  m_Name: ButtonTest Death
+  m_Name: DeathButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2065,14 +2068,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176307014}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5496, y: 972, z: -732}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 168.46112, y: 168.46112, z: 168.46112}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1931641754}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1231600345}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1202738023
 GameObject:
@@ -2087,7 +2090,7 @@ GameObject:
   - component: {fileID: 1202738026}
   - component: {fileID: 1202738025}
   m_Layer: 0
-  m_Name: ButtonTest Prison
+  m_Name: PrisonButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2171,14 +2174,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202738023}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5496, y: 670, z: -732}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -302, z: 0}
   m_LocalScale: {x: 168.46112, y: 168.46112, z: 168.46112}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 904917242}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1231600345}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1214867175
 GameObject:
@@ -2195,7 +2198,7 @@ GameObject:
   - component: {fileID: 1214867181}
   - component: {fileID: 1214867180}
   m_Layer: 0
-  m_Name: Person 3
+  m_Name: Victim 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2281,13 +2284,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214867175}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5749, y: 634, z: -407}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 372, y: -338, z: 325}
   m_LocalScale: {x: 135.89934, y: 135.89934, z: 135.89934}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1596417689}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1214867180
 MonoBehaviour:
@@ -2301,10 +2304,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefeb8856a1ca8f47b51f199eb895d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn2: 1
   victimManager: {fileID: 133916102}
   waypoints:
   - {fileID: 521876580}
-  speed: 5
+  speed: 300
 --- !u!114 &1214867181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2317,10 +2321,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6860dca21cbe3445853a3d04cf8550c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn: 1
+  wonderForce: 0
   victimManager: {fileID: 133916102}
   waypoints:
   - {fileID: 1702166739}
-  speed: 5
+  speed: 300
+--- !u!1 &1231600344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1231600345}
+  m_Layer: 0
+  m_Name: FateButtons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1231600345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231600344}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5496, y: 972, z: -732}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1770497188}
+  - {fileID: 1202738028}
+  - {fileID: 1176307020}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1295175329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,7 +2376,7 @@ GameObject:
   - component: {fileID: 1295175335}
   - component: {fileID: 1295175334}
   m_Layer: 0
-  m_Name: Person 2
+  m_Name: Victim 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2422,13 +2462,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295175329}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5749, y: 634, z: -407}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 372, y: -338, z: 325}
   m_LocalScale: {x: 135.89934, y: 135.89934, z: 135.89934}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1596417689}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1295175334
 MonoBehaviour:
@@ -2442,10 +2482,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefeb8856a1ca8f47b51f199eb895d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn2: 1
   victimManager: {fileID: 133916102}
   waypoints:
   - {fileID: 521876580}
-  speed: 5
+  speed: 300
 --- !u!114 &1295175335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2458,10 +2499,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6860dca21cbe3445853a3d04cf8550c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn: 1
+  wonderForce: 0
   victimManager: {fileID: 133916102}
   waypoints:
   - {fileID: 1702166739}
-  speed: 5
+  speed: 300
 --- !u!1 &1483325102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2528,7 +2571,42 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1596417688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1596417689}
+  m_Layer: 0
+  m_Name: Victims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1596417689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596417688}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6121, y: 972, z: -732}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 289097610}
+  - {fileID: 1295175333}
+  - {fileID: 1214867179}
+  - {fileID: 1815494874}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1702166738
 GameObject:
@@ -2540,7 +2618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1702166739}
   m_Layer: 0
-  m_Name: FirstWaypoint1
+  m_Name: ChairWaypoint 1
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2574,7 +2652,7 @@ GameObject:
   - component: {fileID: 1770497186}
   - component: {fileID: 1770497185}
   m_Layer: 0
-  m_Name: ButtonTest Freedom
+  m_Name: FreedomButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2658,14 +2736,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770497182}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5496, y: 308, z: -732}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -664, z: 0}
   m_LocalScale: {x: 168.46112, y: 168.46112, z: 168.46112}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1105293970}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1231600345}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1815494870
 GameObject:
@@ -2682,7 +2760,7 @@ GameObject:
   - component: {fileID: 1815494876}
   - component: {fileID: 1815494875}
   m_Layer: 0
-  m_Name: Person 4
+  m_Name: Victim 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2768,13 +2846,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815494870}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5749, y: 634, z: -407}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 372, y: -338, z: 325}
   m_LocalScale: {x: 135.89934, y: 135.89934, z: 135.89934}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 1596417689}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1815494875
 MonoBehaviour:
@@ -2788,10 +2866,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefeb8856a1ca8f47b51f199eb895d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn2: 1
   victimManager: {fileID: 133916102}
   waypoints:
   - {fileID: 521876580}
-  speed: 5
+  speed: 300
 --- !u!114 &1815494876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2804,10 +2883,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6860dca21cbe3445853a3d04cf8550c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn: 1
+  wonderForce: 0
   victimManager: {fileID: 133916102}
   waypoints:
   - {fileID: 1702166739}
-  speed: 5
+  speed: 300
 --- !u!1 &1931641753
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class VictimManager : MonoBehaviour
 {
     public FirstWaypoint firstWaypoint;
     public SecondWaypoint secondWaypoint;
+
     public GameObject[] peopleModels; // Array to hold your different people models
 
     [Header("Info")]
@@ -17,7 +18,6 @@ public class VictimManager : MonoBehaviour
     {
         // Shuffle the peopleModels array to randomize selection
         ShuffleArray(peopleModels);
-
         foreach (GameObject person in peopleModels)
         {
             // If the person has not been selected before or has been selected fewer times than others
@@ -29,17 +29,18 @@ public class VictimManager : MonoBehaviour
                 else
                     selectionCounts[person]++;
 
+                firstWaypoint = person.GetComponent<FirstWaypoint>();
+                secondWaypoint = person.GetComponent<SecondWaypoint>();
+                Beginning();
+
                 return person;
             }
         }
-
         // If all people have been selected once, trigger your function
         AllPeopleSelected();
-
         // Return null or handle the case where all people have been selected
         return null;
     }
-
     // Function to shuffle an array
     private void ShuffleArray(GameObject[] array)
     {
@@ -54,6 +55,7 @@ public class VictimManager : MonoBehaviour
     private void AllPeopleSelected()
     {
         Debug.Log("All people have been selected once");
+        // DAY 2
     }
 
     private void Start()
@@ -62,13 +64,18 @@ public class VictimManager : MonoBehaviour
         GameObject randomPerson = SelectRandomPerson();
         currentPerson = randomPerson;
         currentPerson.SetActive(true);
-
-        Beginning();
     }
 
     private void Beginning()
     {
         firstWaypoint.StartMovement();
+        Debug.Log("Beginning");
+    }
+
+    public void AtChair()
+    {
+        Debug.Log("At Chair");
+        firstWaypoint.isOn = false;
     }
 
     // Example function to demonstrate using the selected person
@@ -77,6 +84,7 @@ public class VictimManager : MonoBehaviour
         Debug.Log("Freedom");
         //GetNextPerson();
         secondWaypoint.StartMovement();
+
     }
 
     public void PrisonChoice()
@@ -84,6 +92,7 @@ public class VictimManager : MonoBehaviour
         Debug.Log("Prison");
         //GetNextPerson();
         secondWaypoint.StartMovement();
+
     }
 
     public void DeathChoice()
@@ -91,16 +100,20 @@ public class VictimManager : MonoBehaviour
         Debug.Log("Death");
         //GetNextPerson();
         secondWaypoint.StartMovement();
+
     }
 
     public void GetNextPerson()
     {
+        firstWaypoint.isOn = true;
+
         // Deactivate the current person
         currentPerson.SetActive(false);
-
+        
         // Select and activate the next person
         GameObject randomPerson = SelectRandomPerson();
         currentPerson = randomPerson;
+
         currentPerson.SetActive(true);
     }
 }
