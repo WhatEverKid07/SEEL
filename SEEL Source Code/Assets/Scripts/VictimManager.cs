@@ -4,22 +4,56 @@ using UnityEngine;
 
 public class VictimManager : MonoBehaviour
 {
-    public WaypointManager waypointManager;
+    public FirstWaypoint firstWaypoint;
+    public SecondWaypoint secondWaypoint;
     public GameObject[] peopleModels; // Array to hold your different people models
 
-    private GameObject currentPerson; // Reference to the currently active person
+    [Header("Info")]
+    public GameObject currentPerson; // Reference to the currently active person
+    private Dictionary<GameObject, int> selectionCounts = new Dictionary<GameObject, int>();
 
     // Function to select a random person
     private GameObject SelectRandomPerson()
     {
-        int index;
-        do
-        {
-            // Generate a random index
-            index = Random.Range(0, peopleModels.Length);
-        } while (peopleModels[index] == currentPerson); // Ensure the index is different from the current person
+        // Shuffle the peopleModels array to randomize selection
+        ShuffleArray(peopleModels);
 
-        return peopleModels[index]; // Return the selected person
+        foreach (GameObject person in peopleModels)
+        {
+            // If the person has not been selected before or has been selected fewer times than others
+            if (!selectionCounts.ContainsKey(person) || selectionCounts[person] < 1)
+            {
+                // Increment the selection count for this person
+                if (!selectionCounts.ContainsKey(person))
+                    selectionCounts[person] = 1;
+                else
+                    selectionCounts[person]++;
+
+                return person;
+            }
+        }
+
+        // If all people have been selected once, trigger your function
+        AllPeopleSelected();
+
+        // Return null or handle the case where all people have been selected
+        return null;
+    }
+
+    // Function to shuffle an array
+    private void ShuffleArray(GameObject[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            GameObject temp = array[i];
+            int randomIndex = Random.Range(i, array.Length);
+            array[i] = array[randomIndex];
+            array[randomIndex] = temp;
+        }
+    }
+    private void AllPeopleSelected()
+    {
+        Debug.Log("All people have been selected once");
     }
 
     private void Start()
@@ -34,29 +68,31 @@ public class VictimManager : MonoBehaviour
 
     private void Beginning()
     {
-        waypointManager.StartMovement();
+        firstWaypoint.StartMovement();
     }
 
     // Example function to demonstrate using the selected person
-    public void FreedomChoice(GameObject person)
+    public void FreedomChoice()
     {
         Debug.Log("Freedom");
+        //GetNextPerson();
+        secondWaypoint.StartMovement();
     }
 
-    public void PrisonChoice(GameObject person)
+    public void PrisonChoice()
     {
         Debug.Log("Prison");
+        //GetNextPerson();
+        secondWaypoint.StartMovement();
     }
 
-    public void DeathChoice(GameObject person)
+    public void DeathChoice()
     {
         Debug.Log("Death");
+        //GetNextPerson();
+        secondWaypoint.StartMovement();
     }
 
-    // Example usage in Start() function
-
-
-    // Example function to handle the event where something happens to the current person
     public void GetNextPerson()
     {
         // Deactivate the current person

@@ -12,15 +12,13 @@ public class Target : MonoBehaviour
         renderer = GetComponent<Renderer>();
     }
 
-    private void OnMouseDown()
+    private void OnMouseEnter()
     {
         renderer.material.color = Color.red;
-        Debug.Log("pressed");
     }
 
-    private void OnMouseUp()
+    private void OnMouseExit()
     {
-        renderer.material.color = Color.green;
-        Debug.Log("let go");
+        renderer.material.color = Color.clear;
     }
 }
