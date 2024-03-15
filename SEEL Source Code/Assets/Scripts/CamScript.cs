@@ -16,6 +16,7 @@ public class CamScript : MonoBehaviour
     public Button topTurnButton;
 
     [Header("---Rotation---")]
+    public float turnSpeed = 1.0f;
     public float leftRotation;
     public float leftRotationDown;
     public float rightRotation;
@@ -32,14 +33,7 @@ public class CamScript : MonoBehaviour
         leftSide = false;
         rightSide = false;
         bottomSide = false;
-        /*
-        leftTurnButton.enabled = false;
-        rightTurnButton.enabled = false;
-        bottomTurnButton.enabled = false;
-        topTurnButton.enabled = false;
-        leftTurnButton2.enabled = false;
-        rightTurnButton2.enabled = false;
-        */
+        
     }
 
     void Update()
@@ -66,6 +60,7 @@ public class CamScript : MonoBehaviour
 
     public void LeftTurn()
     {
+        
         Vector3 currentRotation = mainCam.transform.eulerAngles;
         mainCam.transform.eulerAngles = new Vector3(currentRotation.x + leftRotationDown, currentRotation.y + leftRotation, currentRotation.z);
         centre = false;
@@ -92,7 +87,6 @@ public class CamScript : MonoBehaviour
         rightSide = false;
         centre = true;
     }
-
     public void BottomTurn()
     {
         Vector3 currentRotation = mainCam.transform.eulerAngles;
