@@ -6,8 +6,11 @@ public class VictimManager : MonoBehaviour
 {
     public FirstWaypoint firstWaypoint;
     public SecondWaypoint secondWaypoint;
+    public VictinNumber victimNumber;
+    public NumberRemember numberRemember;
 
     public GameObject[] peopleModels; // Array to hold your different people models
+
 
     [Header("Info")]
     public GameObject currentPerson; // Reference to the currently active person
@@ -31,6 +34,7 @@ public class VictimManager : MonoBehaviour
 
                 firstWaypoint = person.GetComponent<FirstWaypoint>();
                 secondWaypoint = person.GetComponent<SecondWaypoint>();
+                victimNumber = person.GetComponent<VictinNumber>();
                 Beginning();
 
                 return person;
@@ -60,7 +64,6 @@ public class VictimManager : MonoBehaviour
 
     private void Start()
     {
-        // Select and activate the initial person
         GameObject randomPerson = SelectRandomPerson();
         currentPerson = randomPerson;
         currentPerson.SetActive(true);
@@ -77,43 +80,54 @@ public class VictimManager : MonoBehaviour
         Debug.Log("At Chair");
         firstWaypoint.isOn = false;
     }
-
-    // Example function to demonstrate using the selected person
     public void FreedomChoice()
     {
         Debug.Log("Freedom");
-        //GetNextPerson();
         secondWaypoint.StartMovement();
-
+        if (victimNumber.death)
+        {
+            numberRemember.BigWrongChoice();
+        }
+        if (victimNumber.prison)
+        {
+            numberRemember.WrongChoice();
+        }
     }
 
     public void PrisonChoice()
     {
         Debug.Log("Prison");
-        //GetNextPerson();
         secondWaypoint.StartMovement();
-
+        if (victimNumber.death)
+        {
+            numberRemember.WrongChoice();
+        }
+        if (victimNumber.freedom)
+        {
+            numberRemember.BigWrongChoice();
+        }
     }
 
     public void DeathChoice()
     {
         Debug.Log("Death");
-        //GetNextPerson();
         secondWaypoint.StartMovement();
-
+        if (victimNumber.freedom)
+        {
+            numberRemember.BigWrongChoice();
+        }
+        if (victimNumber.prison)
+        {
+            numberRemember.BigWrongChoice();
+        }
     }
 
     public void GetNextPerson()
     {
         firstWaypoint.isOn = true;
-
-        // Deactivate the current person
         currentPerson.SetActive(false);
-        
-        // Select and activate the next person
         GameObject randomPerson = SelectRandomPerson();
         currentPerson = randomPerson;
-
         currentPerson.SetActive(true);
     }
 }

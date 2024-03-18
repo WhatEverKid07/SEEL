@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class NumberRemember : MonoBehaviour
 {
-    public static int number;
+    public static int fateNumber;
+    public int wrongChoice;
+    public int bigWrongChoice;
 
-    public void AddPoints()
+    public void WrongChoice()
     {
-        number += 5;
-        Debug.Log(number);
+        fateNumber += wrongChoice;
+        Debug.Log(fateNumber);
+    }
+    public void BigWrongChoice()
+    {
+        fateNumber += bigWrongChoice;
+        Debug.Log(fateNumber);
     }
 }
