@@ -24,7 +24,7 @@ public class TEST2 : MonoBehaviour
         // Initialize target rotation based on current rotation
         targetRotation = transform.rotation;
 
-        leftMaxRotationAngle2 -= leftMaxRotationAngle;
+        leftMaxRotationAngle2 = leftMaxRotationAngle * 2;
         rightMaxRotationAngle2 += rightMaxRotationAngle;
         bottomMaxRotationAngle2 -= bottomMaxRotationAngle;
     }
@@ -43,7 +43,7 @@ public class TEST2 : MonoBehaviour
             totalRotationAngle += Mathf.Abs(rotationAngle) * step;
         }
 
-        if (!turnLeft && totalRotationAngle > leftMaxRotationAngle2 && totalRotationAngle > leftMaxRotationAngle)
+        if (!turnLeft && totalRotationAngle < leftMaxRotationAngle2)
         {
             // Calculate the target rotation based on the specified angle
             Quaternion newRotation = Quaternion.Euler(0, -rotationAngle, 0) * transform.rotation;
@@ -53,6 +53,7 @@ public class TEST2 : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, step);
             // Update the total rotation angle
             totalRotationAngle += Mathf.Abs(rotationAngle) * step;
+            totalRotationAngle = 0f;
         }
 
     }

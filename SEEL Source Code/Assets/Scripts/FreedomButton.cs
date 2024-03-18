@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonOutcome : MonoBehaviour
 {
-    private Renderer renderer;
+    private Component renderer;
     public VictimManager manager;
 
     void Start()
