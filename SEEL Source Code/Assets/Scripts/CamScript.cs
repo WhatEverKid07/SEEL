@@ -27,18 +27,17 @@ public class CamScript : MonoBehaviour
     private bool leftSide;
     private bool rightSide;
     private bool bottomSide;
+
+    private bool isRotating = false;
     void Start()
     {
         centre = true;
         leftSide = false;
         rightSide = false;
         bottomSide = false;
-        
     }
-
     void Update()
     {
-        
         if (centre == true)
         {
             Centre();
@@ -55,12 +54,10 @@ public class CamScript : MonoBehaviour
         {
             BottomSide();
         }
-        
     }
 
     public void LeftTurn()
     {
-        
         Vector3 currentRotation = mainCam.transform.eulerAngles;
         mainCam.transform.eulerAngles = new Vector3(currentRotation.x + leftRotationDown, currentRotation.y + leftRotation, currentRotation.z);
         centre = false;
