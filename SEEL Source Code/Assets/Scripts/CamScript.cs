@@ -28,7 +28,6 @@ public class CamScript : MonoBehaviour
     private bool rightSide;
     private bool bottomSide;
 
-    private bool isRotating = false;
     void Start()
     {
         centre = true;

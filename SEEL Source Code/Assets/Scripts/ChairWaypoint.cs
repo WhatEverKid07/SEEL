@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class FirstWaypoint : MonoBehaviour
 {
     public bool isOn = true;
     public bool AA = false;
+
+    public Transform camera;
 
     public VictimManager victimManager;
     public List<Transform> waypoints = new List<Transform>(); // List of waypoints
@@ -33,8 +37,10 @@ public class FirstWaypoint : MonoBehaviour
         // If there are waypoints and a target waypoint is set
         if (waypoints.Count > 0 && targetWaypoint != null)
         {
+            Vector3 relativePos = targetWaypoint.position - transform.position;
             // Move towards the target waypoint
             transform.position = Vector3.MoveTowards(transform.position, targetWaypoint.position, speed * Time.deltaTime);
+            transform.rotation = Quaternion.LookRotation(relativePos);
             // If the object reaches the current waypoint, set the next waypoint as the target
             if (Vector3.Distance(transform.position, targetWaypoint.position) < 0.1f)
             {
@@ -58,5 +64,12 @@ public class FirstWaypoint : MonoBehaviour
     {
         AA = true;
         victimManager.AtChair();
+
+        Vector3 directionToCamera = camera.position - transform.position;
+        directionToCamera.y = 0f; 
+        if (directionToCamera != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(directionToCamera);
+        }
     }
 }

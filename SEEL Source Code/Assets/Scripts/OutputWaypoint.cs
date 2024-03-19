@@ -32,8 +32,10 @@ public class SecondWaypoint : MonoBehaviour
         // If there are waypoints and a target waypoint is set
         if (waypoints.Count > 0 && targetWaypoint != null)
         {
+            Vector3 relativePos = targetWaypoint.position - transform.position;
             // Move towards the target waypoint
             transform.position = Vector3.MoveTowards(transform.position, targetWaypoint.position, speed * Time.deltaTime);
+            transform.rotation = Quaternion.LookRotation(relativePos);
             // If the object reaches the current waypoint, set the next waypoint as the target
             if (Vector3.Distance(transform.position, targetWaypoint.position) < 0.1f)
             {
