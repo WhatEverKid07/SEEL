@@ -7,7 +7,8 @@ public class VictimManager : MonoBehaviour
     public FirstWaypoint firstWaypoint;
     public SecondWaypoint secondWaypoint;
     public VictinNumber victimNumber;
-    public NumberRemember numberRemember;
+
+    public static int fateNumber;
 
     public GameObject[] peopleModels; // Array to hold your different people models
 
@@ -74,52 +75,45 @@ public class VictimManager : MonoBehaviour
         firstWaypoint.StartMovement();
         Debug.Log("Beginning");
     }
-
     public void AtChair()
     {
         Debug.Log("At Chair");
         firstWaypoint.isOn = false;
     }
+
     public void FreedomChoice()
     {
         Debug.Log("Freedom");
         secondWaypoint.StartMovement();
-        if (victimNumber.death)
-        {
-            numberRemember.BigWrongChoice();
-        }
-        if (victimNumber.prison)
-        {
-            numberRemember.WrongChoice();
-        }
+        Freedom();
     }
-
     public void PrisonChoice()
     {
         Debug.Log("Prison");
         secondWaypoint.StartMovement();
-        if (victimNumber.death)
-        {
-            numberRemember.WrongChoice();
-        }
-        if (victimNumber.freedom)
-        {
-            numberRemember.BigWrongChoice();
-        }
+        Prison();
     }
-
     public void DeathChoice()
     {
         Debug.Log("Death");
         secondWaypoint.StartMovement();
-        if (victimNumber.freedom)
-        {
-            numberRemember.BigWrongChoice();
-        }
-        if (victimNumber.prison)
-        {
-            numberRemember.BigWrongChoice();
-        }
+        Death();
+    }
+
+    public void Freedom()
+    {
+        fateNumber += victimNumber.freedom;
+        Debug.Log(fateNumber);
+    }
+    public void Prison()
+    {
+        fateNumber += victimNumber.prison;
+        Debug.Log(fateNumber);
+    }
+    public void Death()
+    {
+        fateNumber += victimNumber.death;
+        Debug.Log(fateNumber);
     }
 
     public void GetNextPerson()

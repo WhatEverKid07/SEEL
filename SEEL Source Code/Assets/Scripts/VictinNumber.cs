@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VictinNumber : MonoBehaviour
 {
-    public bool freedom;
-    public bool prison;
-    public bool death;
+    public int freedom;
+    public int prison;
+    public int death;
 }

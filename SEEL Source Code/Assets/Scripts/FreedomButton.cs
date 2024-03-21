@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ButtonOutcome : MonoBehaviour
 {
-    private Component renderer;
+    private Component buttonRenderer;
     public VictimManager manager;
 
     void Start()
     {
-        renderer = GetComponent<Renderer>();
+        buttonRenderer = GetComponent<Renderer>();
     }
 
     private void OnMouseUpAsButton()

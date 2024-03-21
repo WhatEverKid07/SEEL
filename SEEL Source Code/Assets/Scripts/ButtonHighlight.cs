@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    private Renderer renderer;
+    private Renderer buttonHighlightRenderer;
 
     void Start()
     {
-        renderer = GetComponent<Renderer>();
+        buttonHighlightRenderer = GetComponent<Renderer>();
     }
 
     private void OnMouseEnter()
     {
-        renderer.material.color = Color.red;
+        buttonHighlightRenderer.material.color = Color.red;
     }
 
     private void OnMouseExit()
     {
-        renderer.material.color = Color.clear;
+        buttonHighlightRenderer.material.color = Color.clear;
     }
 }

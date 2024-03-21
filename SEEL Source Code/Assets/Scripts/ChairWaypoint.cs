@@ -9,7 +9,7 @@ public class FirstWaypoint : MonoBehaviour
     public bool isOn = true;
     public bool AA = false;
 
-    public Transform camera;
+    public Transform mainCamera;
 
     public VictimManager victimManager;
     public List<Transform> waypoints = new List<Transform>(); // List of waypoints
@@ -65,7 +65,7 @@ public class FirstWaypoint : MonoBehaviour
         AA = true;
         victimManager.AtChair();
 
-        Vector3 directionToCamera = camera.position - transform.position;
+        Vector3 directionToCamera = mainCamera.position - transform.position;
         directionToCamera.y = 0f; 
         if (directionToCamera != Vector3.zero)
         {

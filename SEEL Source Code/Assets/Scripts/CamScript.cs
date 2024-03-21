@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CamScript : MonoBehaviour
 {
-    public Camera mainCam;
+    public Transform mainCam;
 
     [Header("---Buttons---")]
     public Button leftTurnButton;
