@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class VictimManager : MonoBehaviour
 {
+    [Header("---Scripts---")]
     public FirstWaypoint firstWaypoint;
     public SecondWaypoint secondWaypoint;
     public VictinNumber victimNumber;
+
+    [Header("---Stamp Outline---")]
+    public Transform freedomOutline;
+    public Transform prisonOutline;
+    public Transform deathOutline;
 
     public static int fateNumber;
 
@@ -79,41 +85,40 @@ public class VictimManager : MonoBehaviour
     {
         Debug.Log("At Chair");
         firstWaypoint.isOn = false;
+        freedomOutline.gameObject.SetActive(true);
+        prisonOutline.gameObject.SetActive(true);
+        deathOutline.gameObject.SetActive(true);
     }
 
     public void FreedomChoice()
     {
         Debug.Log("Freedom");
         secondWaypoint.StartMovement();
-        Freedom();
+        fateNumber += victimNumber.freedom;
+        Debug.Log(fateNumber);
+        freedomOutline.gameObject.SetActive(false);
+        prisonOutline.gameObject.SetActive(false);
+        deathOutline.gameObject.SetActive(false);
     }
     public void PrisonChoice()
     {
         Debug.Log("Prison");
         secondWaypoint.StartMovement();
-        Prison();
+        fateNumber += victimNumber.prison;
+        Debug.Log(fateNumber);
+        freedomOutline.gameObject.SetActive(false);
+        prisonOutline.gameObject.SetActive(false);
+        deathOutline.gameObject.SetActive(false);
     }
     public void DeathChoice()
     {
         Debug.Log("Death");
         secondWaypoint.StartMovement();
-        Death();
-    }
-
-    public void Freedom()
-    {
-        fateNumber += victimNumber.freedom;
-        Debug.Log(fateNumber);
-    }
-    public void Prison()
-    {
-        fateNumber += victimNumber.prison;
-        Debug.Log(fateNumber);
-    }
-    public void Death()
-    {
         fateNumber += victimNumber.death;
         Debug.Log(fateNumber);
+        freedomOutline.gameObject.SetActive(false);
+        prisonOutline.gameObject.SetActive(false);
+        deathOutline.gameObject.SetActive(false);
     }
 
     public void GetNextPerson()
