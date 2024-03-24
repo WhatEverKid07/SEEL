@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public static bool gameIsPaused = false;
+    public List<GameObject> camButtons;
 
     void Update()
     {
@@ -27,7 +28,10 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
         gameIsPaused = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        foreach (GameObject CamButtons in camButtons)
+        {
+            CamButtons.SetActive(true);
+        }
     }
        
     void Pause()
@@ -35,6 +39,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
         gameIsPaused = true;
-        Cursor.lockState = CursorLockMode.None;
+        foreach (GameObject CamButtons in camButtons)
+        {
+            CamButtons.SetActive(false);
+        }
     }
 }
