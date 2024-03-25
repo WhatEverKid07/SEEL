@@ -7,6 +7,8 @@ public class ButtonOutcome2 : MonoBehaviour
     private Renderer button2Renderer;
     public VictimManager manager;
 
+    public Renderer buttonHighlightRenderer;
+
     void Start()
     {
         button2Renderer = GetComponent<Renderer>();
@@ -15,5 +17,6 @@ public class ButtonOutcome2 : MonoBehaviour
     private void OnMouseUpAsButton()
     {
         manager.PrisonChoice();
+        buttonHighlightRenderer.material.color = Color.clear;
     }
 }

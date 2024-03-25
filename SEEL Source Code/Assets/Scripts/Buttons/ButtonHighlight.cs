@@ -7,7 +7,7 @@ public class Target : MonoBehaviour
 {
     public Color outlineRed;
 
-    private Renderer buttonHighlightRenderer;
+    public Renderer buttonHighlightRenderer;
     
     void Start()
     {
