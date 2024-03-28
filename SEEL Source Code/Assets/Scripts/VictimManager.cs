@@ -39,9 +39,9 @@ public class VictimManager : MonoBehaviour
                 else
                     selectionCounts[person]++;
 
-                firstWaypoint = person.GetComponent<FirstWaypoint>();
-                secondWaypoint = person.GetComponent<SecondWaypoint>();
-                victimNumber = person.GetComponent<VictinNumber>();
+                firstWaypoint = person.transform.GetComponentInChildren<FirstWaypoint>();
+                secondWaypoint = person.transform.GetComponentInChildren<SecondWaypoint>();
+                victimNumber = person.transform.GetComponentInChildren<VictinNumber>();
                 Beginning();
 
                 return person;
