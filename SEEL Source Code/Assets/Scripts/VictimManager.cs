@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VictimManager : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class VictimManager : MonoBehaviour
     public FirstWaypoint firstWaypoint;
     public SecondWaypoint secondWaypoint;
     public VictinNumber victimNumber;
+    public DocumentButton documentButton;
 
     [Header("---Stamp Outline---")]
     public Transform freedomOutline;

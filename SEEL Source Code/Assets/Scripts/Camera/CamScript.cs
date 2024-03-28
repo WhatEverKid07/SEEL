@@ -7,6 +7,13 @@ public class CamScript : MonoBehaviour
 {
     public Transform mainCam;
 
+    [Header("---Document---")]
+    public Transform documentOutline;
+    public Transform documentOutline2;
+    public Transform documentOutline3;
+    public Transform documentOutline4;
+    public Transform documentOutline5;
+
     [Header("---Buttons---")]
     public Button leftTurnButton;
     public Button leftTurnButton2;
@@ -105,6 +112,12 @@ public class CamScript : MonoBehaviour
         rightTurnButton2.gameObject.SetActive(false);
         bottomTurnButton.gameObject.SetActive(true);
         topTurnButton.gameObject.SetActive(false);
+
+        documentOutline.gameObject.SetActive(false);
+        documentOutline2.gameObject.SetActive(false);
+        documentOutline3.gameObject.SetActive(false);
+        documentOutline4.gameObject.SetActive(false);
+        documentOutline4.gameObject.SetActive(false);
     }
     void LeftSide()
     {
@@ -114,6 +127,12 @@ public class CamScript : MonoBehaviour
         rightTurnButton2.gameObject.SetActive(false);
         bottomTurnButton.gameObject.SetActive(false);
         topTurnButton.gameObject.SetActive(false);
+
+        documentOutline.gameObject.SetActive(false);
+        documentOutline2.gameObject.SetActive(false);
+        documentOutline3.gameObject.SetActive(false);
+        documentOutline4.gameObject.SetActive(false);
+        documentOutline5.gameObject.SetActive(false);
     }
     void RightSide()
     {
@@ -123,6 +142,12 @@ public class CamScript : MonoBehaviour
         leftTurnButton2.gameObject.SetActive(false);
         bottomTurnButton.gameObject.SetActive(false);
         topTurnButton.gameObject.SetActive(false);
+
+        documentOutline.gameObject.SetActive(false);
+        documentOutline2.gameObject.SetActive(false);
+        documentOutline3.gameObject.SetActive(false);
+        documentOutline4.gameObject.SetActive(false);
+        documentOutline5.gameObject.SetActive(false);
     }
     void BottomSide()
     {
@@ -132,5 +157,11 @@ public class CamScript : MonoBehaviour
         rightTurnButton2.gameObject.SetActive(false);
         bottomTurnButton.gameObject.SetActive(false);
         topTurnButton.gameObject.SetActive(true);
+
+        documentOutline.gameObject.SetActive(true);
+        documentOutline2.gameObject.SetActive(true);
+        documentOutline3.gameObject.SetActive(true);
+        documentOutline4.gameObject.SetActive(true);
+        documentOutline5.gameObject.SetActive(true);
     }
 }

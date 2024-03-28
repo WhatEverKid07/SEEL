@@ -11,7 +11,6 @@ public class DocumentButton : MonoBehaviour
     {
         documentButton = GetComponent<Renderer>();
     }
-
     private void OnMouseEnter()
     {
         documentButton.material.color = Color.red;
