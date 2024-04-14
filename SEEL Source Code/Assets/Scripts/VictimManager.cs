@@ -9,8 +9,9 @@ public class VictimManager : MonoBehaviour
     [Header("---Scripts---")]
     public FirstWaypoint firstWaypoint;
     public SecondWaypoint secondWaypoint;
-    public VictinNumber victimNumber;
+    public VictimData victimData;
     public DocumentButton documentButton;
+    public DoorAnimationControl doorAnimationControl;
 
     [Header("---Stamp Outline---")]
     public Transform freedomOutline;
@@ -18,9 +19,9 @@ public class VictimManager : MonoBehaviour
     public Transform deathOutline;
 
     public static int fateNumber;
-
     public GameObject[] peopleModels; // Array to hold your different people models
-
+    public float rightDoorPauseDuration = 2f;
+    public float afterChoicePause = 2f;
 
     [Header("Info")]
     public GameObject currentPerson; // Reference to the currently active person
@@ -44,7 +45,7 @@ public class VictimManager : MonoBehaviour
 
                 firstWaypoint = person.transform.GetComponentInChildren<FirstWaypoint>();
                 secondWaypoint = person.transform.GetComponentInChildren<SecondWaypoint>();
-                victimNumber = person.transform.GetComponentInChildren<VictinNumber>();
+                victimData = person.transform.GetComponentInChildren<VictimData>();
                 Beginning();
 
                 return person;
@@ -83,11 +84,20 @@ public class VictimManager : MonoBehaviour
     {
         firstWaypoint.StartMovement();
         Debug.Log("Beginning");
+        StartCoroutine(OpenDoorWithPause());
+    }
+    IEnumerator OpenDoorWithPause()
+    {
+        yield return new WaitForSeconds(rightDoorPauseDuration);
+        doorAnimationControl.rightDoorAnimation.SetTrigger("RightOpen");
+        doorAnimationControl.doorOpening.PlayDelayed(0.75f);
     }
     public void AtChair()
     {
         Debug.Log("At Chair");
         firstWaypoint.isOn = false;
+        doorAnimationControl.rightDoorAnimation.SetTrigger("RightClose");
+        doorAnimationControl.doorClosing.PlayDelayed(1.77f);
         freedomOutline.gameObject.SetActive(true);
         prisonOutline.gameObject.SetActive(true);
         deathOutline.gameObject.SetActive(true);
@@ -95,35 +105,54 @@ public class VictimManager : MonoBehaviour
 
     public void FreedomChoice()
     {
+        AudioClip freedomRandomClip = victimData.freedomDialogue[Random.Range(0, victimData.freedomDialogue.Count)];
+        victimData.victimAudioSource.clip = freedomRandomClip;
+        victimData.victimAudioSource.Play();
+        EveryChoice();
         Debug.Log("Freedom");
-        secondWaypoint.StartMovement();
-        fateNumber += victimNumber.freedom;
-        Debug.Log(fateNumber);
-        freedomOutline.gameObject.SetActive(false);
-        prisonOutline.gameObject.SetActive(false);
-        deathOutline.gameObject.SetActive(false);
+        fateNumber += victimData.freedom;
+        StartCoroutine(VoiceLines(freedomRandomClip.length));
     }
     public void PrisonChoice()
     {
+        AudioClip prisonRandomClip = victimData.prisonDialogue[Random.Range(0, victimData.prisonDialogue.Count)];
+        victimData.victimAudioSource.clip = prisonRandomClip;
+        victimData.victimAudioSource.Play();
+        EveryChoice();
         Debug.Log("Prison");
-        secondWaypoint.StartMovement();
-        fateNumber += victimNumber.prison;
-        Debug.Log(fateNumber);
-        freedomOutline.gameObject.SetActive(false);
-        prisonOutline.gameObject.SetActive(false);
-        deathOutline.gameObject.SetActive(false);
+        fateNumber += victimData.prison;
+        StartCoroutine(VoiceLines(prisonRandomClip.length));
     }
     public void DeathChoice()
     {
+        AudioClip deathRandomClip = victimData.deathDialogue[Random.Range(0, victimData.deathDialogue.Count)];
+        victimData.victimAudioSource.clip = deathRandomClip;
+        victimData.victimAudioSource.Play();
+        EveryChoice();
         Debug.Log("Death");
-        secondWaypoint.StartMovement();
-        fateNumber += victimNumber.death;
+        fateNumber += victimData.death;
+        StartCoroutine(VoiceLines(deathRandomClip.length));
+    }
+    public void EveryChoice()
+    {
+        StartCoroutine(AfterChoice());
         Debug.Log(fateNumber);
         freedomOutline.gameObject.SetActive(false);
         prisonOutline.gameObject.SetActive(false);
         deathOutline.gameObject.SetActive(false);
     }
-
+    IEnumerator VoiceLines(float clipLength)
+    {
+        yield return new WaitForSeconds(clipLength);
+        doorAnimationControl.leftDoorAnimation.SetTrigger("LeftOpen");
+        doorAnimationControl.doorOpening.PlayDelayed(0.39f);
+        StartCoroutine(AfterChoice());
+    }
+    IEnumerator AfterChoice()
+    {
+        yield return new WaitForSeconds(3f);
+        secondWaypoint.StartMovement();
+    }
     public void GetNextPerson()
     {
         firstWaypoint.isOn = true;
@@ -131,5 +160,7 @@ public class VictimManager : MonoBehaviour
         GameObject randomPerson = SelectRandomPerson();
         currentPerson = randomPerson;
         currentPerson.SetActive(true);
+        doorAnimationControl.leftDoorAnimation.SetTrigger("LeftClose");
+        doorAnimationControl.doorClosing.PlayDelayed(1.2f);
     }
 }

@@ -25,6 +25,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        AudioListener.pause = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
         gameIsPaused = false;
@@ -36,6 +37,7 @@ public class PauseMenu : MonoBehaviour
        
     void Pause()
     {
+        AudioListener.pause = true;
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
         gameIsPaused = true;

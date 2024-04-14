@@ -1,0 +1,709 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.4f1 (35713cd46cd7) revision 3502396'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 14258 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+M:\Unity\2022.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/Eugenio-C-L/Documents/GitHub/SEEL/SEEL Source Code
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+56185
+Successfully changed project path to: C:/Users/Eugenio-C-L/Documents/GitHub/SEEL/SEEL Source Code
+C:/Users/Eugenio-C-L/Documents/GitHub/SEEL/SEEL Source Code
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [2260] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1843278502 [EditorId] 1843278502 [Version] 1048832 [Id] WindowsEditor(7,NASA-PC9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [2260] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1843278502 [EditorId] 1843278502 [Version] 1048832 [Id] WindowsEditor(7,NASA-PC9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 101.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.4f1 (35713cd46cd7)
+[Subsystems] Discovering subsystems at path M:/Unity/2022.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Eugenio-C-L/Documents/GitHub/SEEL/SEEL Source Code/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f82)
+    Vendor:   NVIDIA
+    VRAM:     3950 MB
+    Driver:   31.0.15.4629
+Initialize mono
+Mono path[0] = 'M:/Unity/2022.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'M:/Unity/2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'M:/Unity/2022.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56000
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: M:/Unity/2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009483 seconds.
+- Loaded All Assemblies, in  8.851 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.366 seconds
+Domain Reload Profiling: 9216ms
+	BeginReloadAssembly (6698ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (684ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (80ms)
+	LoadAllAssembliesAndSetupDomain (1374ms)
+		LoadAssemblies (6697ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (1369ms)
+			TypeCache.Refresh (1368ms)
+				TypeCache.ScanAssembly (1078ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (366ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (288ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (10ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (190ms)
+			ProcessInitializeOnLoadMethodAttributes (74ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Eugenio-C-L\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Eugenio-C-L\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  3.740 seconds
+Refreshing native plugins compatible for Editor in 6.48 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.824 seconds
+Domain Reload Profiling: 4562ms
+	BeginReloadAssembly (178ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (26ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (3449ms)
+		LoadAssemblies (2750ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (778ms)
+			TypeCache.Refresh (750ms)
+				TypeCache.ScanAssembly (675ms)
+			ScanForSourceGeneratedMonoScriptInfo (21ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (825ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (583ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (79ms)
+			ProcessInitializeOnLoadAttributes (457ms)
+			ProcessInitializeOnLoadMethodAttributes (31ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.33 seconds
+Refreshing native plugins compatible for Editor in 5.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3430 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 56 unused Assets / (1.4 MB). Loaded Objects now: 3887.
+Memory consumption went from 211.8 MB to 210.4 MB.
+Total: 4.558200 ms (FindLiveObjects: 0.293400 ms CreateObjectMapping: 0.113900 ms MarkObjects: 3.784500 ms  DeleteObjects: 0.365000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Eugenio-C-L\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Eugenio-C-L\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  4.511 seconds
+Refreshing native plugins compatible for Editor in 56.93 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.660 seconds
+Domain Reload Profiling: 7181ms
+	BeginReloadAssembly (306ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (62ms)
+	RebuildCommonClasses (102ms)
+	RebuildNativeTypeToScriptingClass (36ms)
+	initialDomainReloadingComplete (111ms)
+	LoadAllAssembliesAndSetupDomain (3966ms)
+		LoadAssemblies (1271ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (2718ms)
+			TypeCache.Refresh (2626ms)
+				TypeCache.ScanAssembly (2543ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (92ms)
+	FinalizeReload (2661ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (839ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (106ms)
+			ProcessInitializeOnLoadAttributes (683ms)
+			ProcessInitializeOnLoadMethodAttributes (33ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 6.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3381 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (1.3 MB). Loaded Objects now: 3902.
+Memory consumption went from 200.9 MB to 199.6 MB.
+Total: 4.544600 ms (FindLiveObjects: 0.300900 ms CreateObjectMapping: 0.159900 ms MarkObjects: 3.676500 ms  DeleteObjects: 0.406300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 50210.028053 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barRed_verticalBottom.png
+  artifactKey: Guid(65a25802229818a4091835b73251d90b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barRed_verticalBottom.png using Guid(65a25802229818a4091835b73251d90b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfd0e74b3c461718d351e4a5f2d5cc6f') in 0.815702 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonLong_beige_pressed.png
+  artifactKey: Guid(c5cae6cd82a17af4ea38cb111ff3bf99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonLong_beige_pressed.png using Guid(c5cae6cd82a17af4ea38cb111ff3bf99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8c4fb152973dca4ddc8b8b9d1da9547') in 0.035944 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonLong_blue.png
+  artifactKey: Guid(68d89df3059a492419e1e69e4ac7ac83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonLong_blue.png using Guid(68d89df3059a492419e1e69e4ac7ac83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '115a354256f12f57386dee61328489d4') in 0.044388 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.007266 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barYellow_verticalMid.png
+  artifactKey: Guid(ff3ff224e9e6db24ea87689dc982f960) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barYellow_verticalMid.png using Guid(ff3ff224e9e6db24ea87689dc982f960) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a53a6c80c4722839219895e089ce0c0') in 0.064876 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.001048 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/panel_blue.png
+  artifactKey: Guid(eb700a4169b637841b89d5cea5ccbcbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/panel_blue.png using Guid(eb700a4169b637841b89d5cea5ccbcbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4c51fec5ce0aa40a18dcc972ffc29ed') in 0.047664 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.002924 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/panel_beige.png
+  artifactKey: Guid(2bf7fa8e12b960d42a965f94ac85d44d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/panel_beige.png using Guid(2bf7fa8e12b960d42a965f94ac85d44d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa25c0609375d4864708e22fe25700b1') in 0.045445 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000746 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barRed_horizontalMid.png
+  artifactKey: Guid(25fb689aa2588464e8a29d40946d252f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barRed_horizontalMid.png using Guid(25fb689aa2588464e8a29d40946d252f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c397bea717210c2897e1ca0f8af46f50') in 0.031353 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonRound_blue.png
+  artifactKey: Guid(db76416c63fb0b14fbcaf8eb8f074f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonRound_blue.png using Guid(db76416c63fb0b14fbcaf8eb8f074f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf17996fea44bbe20ad277fd3784a8e9') in 0.032632 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barGreen_horizontalMid.png
+  artifactKey: Guid(4beccb2b26c06344ea5e004c1d78d0c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barGreen_horizontalMid.png using Guid(4beccb2b26c06344ea5e004c1d78d0c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8290802f5ca6e2fe96baa5763d96b1cc') in 0.042164 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/arrowSilver_left.png
+  artifactKey: Guid(9b2aafa9ec07c044cb495daf554abf93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/arrowSilver_left.png using Guid(9b2aafa9ec07c044cb495daf554abf93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a5e84c0ceb224210d72655ca2b3eaaf') in 0.050422 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000413 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/iconCheck_bronze.png
+  artifactKey: Guid(3d4a7a8c83bb177488e6a21c12f09559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/iconCheck_bronze.png using Guid(3d4a7a8c83bb177488e6a21c12f09559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76482d34ab455231a32ec2c8b0f5b145') in 0.026181 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonLong_brown.png
+  artifactKey: Guid(88c93cb89a164a441b5718a17210f6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonLong_brown.png using Guid(88c93cb89a164a441b5718a17210f6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8520442fe1ed027fc275dd9950db86fc') in 0.059992 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/iconCircle_blue.png
+  artifactKey: Guid(5e59264a1f56e7f4598326b4f2eef50c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/iconCircle_blue.png using Guid(5e59264a1f56e7f4598326b4f2eef50c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e612f6086f9eb9b11631128012374d4a') in 0.049590 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonLong_grey_pressed.png
+  artifactKey: Guid(6b9511ed05816244294e8472c71db679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonLong_grey_pressed.png using Guid(6b9511ed05816244294e8472c71db679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2c76db4bc6f5f766a4db934b2bbc370') in 0.032833 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/cursorSword_gold.png
+  artifactKey: Guid(df28b7ea94b51bb4e9878f315f24abac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/cursorSword_gold.png using Guid(df28b7ea94b51bb4e9878f315f24abac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efdbd079e9a548ab2954a97ce12dad88') in 0.022048 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000354 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barYellow_horizontalLeft.png
+  artifactKey: Guid(dcc67fc8b17b87a49a1abf5fabdfc27a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barYellow_horizontalLeft.png using Guid(dcc67fc8b17b87a49a1abf5fabdfc27a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f2e9058fbf3ae6a426e78ff65d8e862') in 0.025905 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/arrowBeige_right.png
+  artifactKey: Guid(7cd3ee5acbcea4d4a86f5da052b3438a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/arrowBeige_right.png using Guid(7cd3ee5acbcea4d4a86f5da052b3438a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b82f83e59ebf0cfea922e7564e74cd64') in 0.025663 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/arrowBrown_right.png
+  artifactKey: Guid(57ef6b762d3eb47448e702fcca79781b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/arrowBrown_right.png using Guid(57ef6b762d3eb47448e702fcca79781b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc26fde243365cce7513d2c8254f8239') in 0.029943 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barGreen_horizontalLeft.png
+  artifactKey: Guid(e20329389ed550f439b9825e92e94f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barGreen_horizontalLeft.png using Guid(e20329389ed550f439b9825e92e94f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0333dd57123048c643b91517f7aa8d4b') in 0.048083 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barGreen_verticalMid.png
+  artifactKey: Guid(c453751140675574a82f466dfc53f1c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barGreen_verticalMid.png using Guid(c453751140675574a82f466dfc53f1c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc805866c6af8bb18e193e35626f40b8') in 0.922395 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barBlue_verticalTop.png
+  artifactKey: Guid(2e5f1795f0a73384a954e89648156e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barBlue_verticalTop.png using Guid(2e5f1795f0a73384a954e89648156e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d055e921e4f386303bfc74f4de22d30') in 0.215596 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_blue.png
+  artifactKey: Guid(e9aaf1fc47177ae4e9d90ecabf4f2c2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_blue.png using Guid(e9aaf1fc47177ae4e9d90ecabf4f2c2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98cff2d87a53976ca5a794f788ad9e88') in 0.044659 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barGreen_verticalTop.png
+  artifactKey: Guid(2d215060830ea154380fe28b1520ca96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barGreen_verticalTop.png using Guid(2d215060830ea154380fe28b1520ca96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3596e0c5c6b57504507e3b52e1bccf16') in 0.166578 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/arrowBrown_left.png
+  artifactKey: Guid(e351050427123104d9bd314ef7640168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/arrowBrown_left.png using Guid(e351050427123104d9bd314ef7640168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee5ebd33b883f5d10cad840408c928b4') in 0.076828 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/iconCheck_blue.png
+  artifactKey: Guid(dfa652559cc9eb24b87fbe1f42f84ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/iconCheck_blue.png using Guid(dfa652559cc9eb24b87fbe1f42f84ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6e6224104829c2c35c461943246e0b8') in 0.151930 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/cursorHand_blue.png
+  artifactKey: Guid(776938b40bbdc0d4fb832c1654bad090) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/cursorHand_blue.png using Guid(776938b40bbdc0d4fb832c1654bad090) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43d2897604118c9369d397afe781cba7') in 0.275041 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barBlue_horizontalLeft.png
+  artifactKey: Guid(87552ac8b16fe7345bdd82439b6d27e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barBlue_horizontalLeft.png using Guid(87552ac8b16fe7345bdd82439b6d27e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c139a37c6fba36d149bb50644b0d23ce') in 0.245612 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000454 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_brown_pressed.png
+  artifactKey: Guid(cf0616135b31f604caed243f635c1aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_brown_pressed.png using Guid(cf0616135b31f604caed243f635c1aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32e8cc6813c639c1cbbf99a7e8f4c8ac') in 0.055666 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.026446 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barGreen_verticalBottom.png
+  artifactKey: Guid(2879f156d0afa9140b16a2d078cc48f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barGreen_verticalBottom.png using Guid(2879f156d0afa9140b16a2d078cc48f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e41cde27390db1d027c83395cf8d48e') in 0.077982 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barYellow_horizontalRight.png
+  artifactKey: Guid(76b97eb9e6711754c998d643ce6eb9f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barYellow_horizontalRight.png using Guid(76b97eb9e6711754c998d643ce6eb9f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '341218aed113d9eaaeb96799a1c42f57') in 0.074040 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barYellow_horizontalMid.png
+  artifactKey: Guid(f2f066f5a4d320d4a9a7cc832ad39ae6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barYellow_horizontalMid.png using Guid(f2f066f5a4d320d4a9a7cc832ad39ae6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb0ca5c8dcd40a3d0d7c0b5a635f4454') in 0.089396 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.001444 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png
+  artifactKey: Guid(58127b0f734e11741ab625f7811bb777) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonRound_grey.png using Guid(58127b0f734e11741ab625f7811bb777) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '499c117ff4c890167d5452f983761ced') in 0.095139 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/cursorSword_silver.png
+  artifactKey: Guid(0b37c7306b5f7664fbe903fb150cfe84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/cursorSword_silver.png using Guid(0b37c7306b5f7664fbe903fb150cfe84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '418717557df87df0361c84fcf42bbecb') in 0.077425 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonLong_grey.png
+  artifactKey: Guid(b7f383e631484874c83b779759dc2f90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonLong_grey.png using Guid(b7f383e631484874c83b779759dc2f90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f189979d512c9e6beba09b4e4e297d9') in 0.023636 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/panelInset_beige.png
+  artifactKey: Guid(e9f80c5f121d6ff4a81c949d6094f79d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/panelInset_beige.png using Guid(e9f80c5f121d6ff4a81c949d6094f79d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ad8c2699c8bad0436cd88b46450ca51') in 0.039290 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/iconCheck_grey.png
+  artifactKey: Guid(3aefe9f3f36fd77458e75e2dff0f633b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/iconCheck_grey.png using Guid(3aefe9f3f36fd77458e75e2dff0f633b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88d6493afb4cc012ae28a6bd50f55ed8') in 0.045412 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000365 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_brown.png
+  artifactKey: Guid(207ebffc9abac144e9c6044f1c4af39d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonSquare_brown.png using Guid(207ebffc9abac144e9c6044f1c4af39d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a774efe4a201711df2af6e506c47fe9f') in 0.082026 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barYellow_verticalBottom.png
+  artifactKey: Guid(f2c857218cfc74f40aec1d747fe81c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/barYellow_verticalBottom.png using Guid(f2c857218cfc74f40aec1d747fe81c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd10b43e0a1b22e0ffa98d2350cc6253') in 0.040386 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/iconCross_grey.png
+  artifactKey: Guid(27da91dbe7d50f34eaaf5ed3de2ac03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/iconCross_grey.png using Guid(27da91dbe7d50f34eaaf5ed3de2ac03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7382913c92194d0d8bdd36ecab6c6a0') in 0.062665 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonRound_brown.png
+  artifactKey: Guid(40f28d7b60348114fb1135b389c0daa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/buttonRound_brown.png using Guid(40f28d7b60348114fb1135b389c0daa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f61a709bd615d4c52c044a865fd5d5a2') in 0.043272 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000352 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/cursorGauntlet_bronze.png
+  artifactKey: Guid(53341084a83df2142932da248cecf95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/cursorGauntlet_bronze.png using Guid(53341084a83df2142932da248cecf95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c0bf405537eadf86c60b622f4bfedf3') in 0.564181 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/iconCross_brown.png
+  artifactKey: Guid(b55fd95df2318504c85cf9bcbef8a08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/iconCross_brown.png using Guid(b55fd95df2318504c85cf9bcbef8a08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1170d016e6b628312ad78f1176601a46') in 0.064113 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 39.833000 seconds.
+  path: Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/panelInset_blue.png
+  artifactKey: Guid(2676905e1645ecc4e8f0d303c851f1f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Temp/kenney_ui-pack-rpg-expansion/PNG/panelInset_blue.png using Guid(2676905e1645ecc4e8f0d303c851f1f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd2a37a69642bf30ddafaa24e19ca436') in 0.017164 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Eugenio-C-L\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Eugenio-C-L\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  3.638 seconds
+Refreshing native plugins compatible for Editor in 22.16 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.339 seconds
+Domain Reload Profiling: 6961ms
+	BeginReloadAssembly (952ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (17ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (518ms)
+	RebuildCommonClasses (140ms)
+	RebuildNativeTypeToScriptingClass (38ms)
+	initialDomainReloadingComplete (99ms)
+	LoadAllAssembliesAndSetupDomain (2392ms)
+		LoadAssemblies (1367ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (1254ms)
+			TypeCache.Refresh (1220ms)
+				TypeCache.ScanAssembly (1188ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (35ms)
+	FinalizeReload (3339ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (794ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (19ms)
+			SetLoadedEditorAssemblies (17ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (170ms)
+			ProcessInitializeOnLoadAttributes (556ms)
+			ProcessInitializeOnLoadMethodAttributes (27ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 6.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3380 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (1.3 MB). Loaded Objects now: 3943.
+Memory consumption went from 205.2 MB to 203.8 MB.
+Total: 4.369300 ms (FindLiveObjects: 0.330200 ms CreateObjectMapping: 0.182100 ms MarkObjects: 3.511000 ms  DeleteObjects: 0.344500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Eugenio-C-L\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Eugenio-C-L\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  2.178 seconds
+Refreshing native plugins compatible for Editor in 40.71 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.351 seconds
+Domain Reload Profiling: 5523ms
+	BeginReloadAssembly (462ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (101ms)
+	RebuildCommonClasses (80ms)
+	RebuildNativeTypeToScriptingClass (29ms)
+	initialDomainReloadingComplete (73ms)
+	LoadAllAssembliesAndSetupDomain (1527ms)
+		LoadAssemblies (1003ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (787ms)
+			TypeCache.Refresh (759ms)
+				TypeCache.ScanAssembly (733ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (28ms)
+	FinalizeReload (3352ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1250ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (10ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (278ms)
+			ProcessInitializeOnLoadAttributes (849ms)
+			ProcessInitializeOnLoadMethodAttributes (97ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 6.01 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3381 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (1.3 MB). Loaded Objects now: 3958.
+Memory consumption went from 205.4 MB to 204.1 MB.
+Total: 5.004200 ms (FindLiveObjects: 0.431000 ms CreateObjectMapping: 0.154600 ms MarkObjects: 3.945000 ms  DeleteObjects: 0.472300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
