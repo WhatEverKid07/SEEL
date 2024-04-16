@@ -20,6 +20,9 @@ public class VolumeSlider : MonoBehaviour
     private void Start()
     {
         //Time.timeScale = 0;
+        allSound.value = 1;
+        musicSlider.value = 1;
+        SFX_Slider.value = 1;
         allAudioSliderVolume = allSound.value;
         musicSliderVolume = musicSlider.value;
         SFX_SliderVolume = SFX_Slider.value;
@@ -33,10 +36,13 @@ public class VolumeSlider : MonoBehaviour
         musicSliderVolume = musicSliderVolumeStatic;
         SFX_SliderVolume = SFX_SliderVolumeStatic;
         Debug.Log("AWAKE");
-        if (SFX_Slider.value != SFX_SliderVolume)
-        {
-            SFX_Slider.value = SFX_SliderVolume;
-        }
+
+        StartCoroutine(SliderValueSet());
+    }
+
+    IEnumerator SliderValueSet()
+    {
+        yield return new WaitForSeconds(1);
         if (allSound.value != allAudioSliderVolume)
         {
             allSound.value = allAudioSliderVolume;
@@ -45,9 +51,18 @@ public class VolumeSlider : MonoBehaviour
         {
             musicSlider.value = musicSliderVolume;
         }
-
+        if (SFX_Slider.value != SFX_SliderVolume)
+        {
+            SFX_Slider.value = SFX_SliderVolume;
+        }
+        //SliderUpdate();
     }
-
+    public void SliderUpdate()
+    {
+        allSound.value = allAudioSliderVolume;
+        musicSlider.value = musicSliderVolume;
+        SFX_Slider.value = SFX_SliderVolume;
+    }
     public void VolumeUpdate()
     {
         allAudioSliderVolume = allSound.value;
