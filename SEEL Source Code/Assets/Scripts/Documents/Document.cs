@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class Document : MonoBehaviour
 {
-    public float speed; 
+    public float speed;
     public float rotateSpeed;
     public Transform target;
     //Vector3 startPosition;
@@ -16,18 +16,19 @@ public class Document : MonoBehaviour
 
     private void Start()
     {
-          //startPosition = transform.position;
+        //startPosition = transform.position;
     }
     void Update()
     {
 
-        if(targetReached == false && start == true)
+
+        if (targetReached == false && start == true)
         {
             // Move our position a step closer to the target.
             var step = speed * Time.deltaTime; // calculate distance to move
-            transform.position = Vector3.MoveTowards(transform.position,  target.position, step);
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
             transform.Rotate(rotateSpeed, 0.0f, 0.0f);
-            if (Vector3.Distance(transform.position, target.position) < 0.001f)
+            if (Vector3.Distance(transform.position, target.position) < 0.00000000000000000001f)
             {
                 Debug.Log("Target Reached");
                 targetReached = true;
@@ -40,7 +41,7 @@ public class Document : MonoBehaviour
             var step = speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, tableTarget.position, step);
             transform.Rotate(-rotateSpeed, 0.0f, 0.0f);
-            if (Vector3.Distance(transform.position, tableTarget.position) < 0.001f)
+            if (Vector3.Distance(transform.position, tableTarget.position) < 0.0000000000000000000000000001f)
             {
                 Debug.Log("Target Reached");
                 targetReached = false;
