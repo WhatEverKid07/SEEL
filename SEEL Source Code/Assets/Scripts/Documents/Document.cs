@@ -8,14 +8,15 @@ public class Document : MonoBehaviour
     public float speed; 
     public float rotateSpeed;
     public Transform target;
+    //Vector3 startPosition;
     public Transform tableTarget;
     public bool start = false;
 
     private bool targetReached = false;
 
-    private void OnMouseDown()
+    private void Start()
     {
-        
+          //startPosition = transform.position;
     }
     void Update()
     {
@@ -24,8 +25,8 @@ public class Document : MonoBehaviour
         {
             // Move our position a step closer to the target.
             var step = speed * Time.deltaTime; // calculate distance to move
-            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-            transform.Rotate(-rotateSpeed, 0.0f, 0.0f);
+            transform.position = Vector3.MoveTowards(transform.position,  target.position, step);
+            transform.Rotate(rotateSpeed, 0.0f, 0.0f);
             if (Vector3.Distance(transform.position, target.position) < 0.001f)
             {
                 Debug.Log("Target Reached");
@@ -38,7 +39,7 @@ public class Document : MonoBehaviour
             // Move our position a step closer to the target.
             var step = speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, tableTarget.position, step);
-            transform.Rotate(rotateSpeed, 0.0f, 0.0f);
+            transform.Rotate(-rotateSpeed, 0.0f, 0.0f);
             if (Vector3.Distance(transform.position, tableTarget.position) < 0.001f)
             {
                 Debug.Log("Target Reached");
