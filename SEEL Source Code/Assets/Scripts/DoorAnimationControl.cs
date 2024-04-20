@@ -24,4 +24,12 @@ public class DoorAnimationControl : MonoBehaviour
         leftDoorAnimation = leftDoor.GetComponent<Animator>();
         //rightDoorAnimation.SetTrigger("RightOpen");
     }
+    /*
+    public void CloseLeftDoor()
+    {
+        leftDoorAnimation.SetTrigger("LeftClose");
+        doorClosing.PlayDelayed(1.2f);
+        Debug.Log("HAHASHDADHAS");
+    }
+    */
 }

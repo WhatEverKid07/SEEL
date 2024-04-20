@@ -6,6 +6,7 @@ public class ButtonOutcome3 : MonoBehaviour
 {
     private Renderer button3Renderer;
     public VictimManager manager;
+    public Animator animator;
 
     public Renderer buttonHighlightRenderer;
 
@@ -16,6 +17,7 @@ public class ButtonOutcome3 : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
+        animator.SetTrigger("Execute Stamp");
         manager.DeathChoice();
         buttonHighlightRenderer.material.color = Color.clear;
     }

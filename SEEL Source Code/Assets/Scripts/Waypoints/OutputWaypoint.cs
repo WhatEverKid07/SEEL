@@ -54,7 +54,8 @@ public class SecondWaypoint : MonoBehaviour
     }
     void ReachedLastWaypoint()
     {
-        victimManager.doorAnimationControl.leftDoorAnimation.SetTrigger("LeftClose");
-        //victimManager.GetNextPerson();
+        //victimManager.doorAnimationControl.leftDoorAnimation.SetTrigger("LeftClose");
+        victimManager.JustBeforeNextPerson();
+
     }
 }

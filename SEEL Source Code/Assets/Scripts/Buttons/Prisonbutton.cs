@@ -6,6 +6,7 @@ public class ButtonOutcome2 : MonoBehaviour
 {
     private Renderer button2Renderer;
     public VictimManager manager;
+    public Animator animator;
 
     public Renderer buttonHighlightRenderer;
 
@@ -16,6 +17,7 @@ public class ButtonOutcome2 : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
+        animator.SetTrigger("Jail Stamp");
         manager.PrisonChoice();
         buttonHighlightRenderer.material.color = Color.clear;
     }

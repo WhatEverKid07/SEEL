@@ -12,6 +12,7 @@ public class VictimManager : MonoBehaviour
     public VictimData victimData;
     public DocumentButton documentButton;
     public DoorAnimationControl doorAnimationControl;
+    public Document_DrawerAnimationController documentDrawerAnimationController;
 
     [Header("---Stamp Outline---")]
     public Transform freedomOutline;
@@ -20,12 +21,16 @@ public class VictimManager : MonoBehaviour
 
     public static int fateNumber;
     public GameObject[] peopleModels; // Array to hold your different people models
-    public float rightDoorPauseDuration = 2f;
-    public float afterChoicePause = 2f;
+    public float rightDoorPauseDuration;
+    public float afterChoicePause;
 
     [Header("Info")]
     public GameObject currentPerson; // Reference to the currently active person
     public Animator victimAnimatorController;
+    public Transform nextVictimButtonOutline;
+
+    //public Animator 
+
     private Dictionary<GameObject, int> selectionCounts = new Dictionary<GameObject, int>();
 
     // Function to select a random person
@@ -48,6 +53,8 @@ public class VictimManager : MonoBehaviour
                 secondWaypoint = person.transform.GetComponentInChildren<SecondWaypoint>();
                 victimData = person.transform.GetComponentInChildren<VictimData>();
                 victimAnimatorController = person.transform.GetComponentInChildren<Animator>();
+
+
                 Beginning();
 
                 return person;
@@ -80,10 +87,14 @@ public class VictimManager : MonoBehaviour
         GameObject randomPerson = SelectRandomPerson();
         currentPerson = randomPerson;
         currentPerson.SetActive(true);
+        
+        nextVictimButtonOutline.gameObject.SetActive(false);
     }
 
     private void Beginning()
     {
+
+        documentDrawerAnimationController.TakeOutDocument();
         firstWaypoint.StartMovement();
         Debug.Log("Beginning");
         StartCoroutine(OpenDoorWithPause());
@@ -114,7 +125,8 @@ public class VictimManager : MonoBehaviour
         EveryChoice();
         Debug.Log("Freedom");
         fateNumber += victimData.freedom;
-        StartCoroutine(VoiceLines(freedomRandomClip.length));
+        StartCoroutine(VoiceLines());
+        //        StartCoroutine(VoiceLines(freedomRandomClip.length));
     }
     public void PrisonChoice()
     {
@@ -124,7 +136,8 @@ public class VictimManager : MonoBehaviour
         EveryChoice();
         Debug.Log("Prison");
         fateNumber += victimData.prison;
-        StartCoroutine(VoiceLines(prisonRandomClip.length));
+        StartCoroutine(VoiceLines());
+        //        StartCoroutine(VoiceLines(prisonRandomClip.length));
     }
     public void DeathChoice()
     {
@@ -135,20 +148,23 @@ public class VictimManager : MonoBehaviour
         Debug.Log("Death");
         fateNumber += victimData.death;
 
-        StartCoroutine(VoiceLines(deathRandomClip.length));
+        StartCoroutine(VoiceLines());
+        //StartCoroutine(VoiceLines(deathRandomClip.length));
     }
     public void EveryChoice()
     {
         victimAnimatorController.SetTrigger("Stand");
-        StartCoroutine(AfterChoice());
+        //StartCoroutine(AfterChoice());
         Debug.Log(fateNumber);
         freedomOutline.gameObject.SetActive(false);
         prisonOutline.gameObject.SetActive(false);
         deathOutline.gameObject.SetActive(false);
     }
-    IEnumerator VoiceLines(float clipLength)
+    IEnumerator VoiceLines()
     {
-        yield return new WaitForSeconds(clipLength);
+        //    IEnumerator VoiceLines(float clipLength)
+        //        yield return new WaitForSeconds(clipLength);
+        yield return new WaitForSeconds(5f);
 
         doorAnimationControl.leftDoorAnimation.SetTrigger("LeftOpen");
         doorAnimationControl.doorOpening.PlayDelayed(0.39f);
@@ -156,18 +172,34 @@ public class VictimManager : MonoBehaviour
     }
     IEnumerator AfterChoice()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         victimAnimatorController.SetTrigger("Walk");
         secondWaypoint.StartMovement();
+        yield return new WaitForSeconds(3.3f);
+        documentDrawerAnimationController.PutAwayDocument();
     }
-    public void GetNextPerson()
+    public void JustBeforeNextPerson()
     {
+        doorAnimationControl.leftDoorAnimation.SetTrigger("LeftClose");
+        doorAnimationControl.doorClosing.PlayDelayed(1.2f);
         firstWaypoint.isOn = true;
+
         currentPerson.SetActive(false);
+        Debug.Log("Away Document HAHAHAHA");
+        StartCoroutine(GetNextPerson());
+        //nextVictimButtonOutline.gameObject.SetActive(true);
+    }
+
+
+    public IEnumerator GetNextPerson()
+    {
+        yield return new WaitForSeconds(2f);
+
+
         GameObject randomPerson = SelectRandomPerson();
         currentPerson = randomPerson;
         currentPerson.SetActive(true);
-        //doorAnimationControl.leftDoorAnimation.SetTrigger("LeftClose");
-        //doorAnimationControl.doorClosing.PlayDelayed(1.2f);
+        
+
     }
 }

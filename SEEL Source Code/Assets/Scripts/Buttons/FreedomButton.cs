@@ -6,6 +6,7 @@ public class ButtonOutcome : MonoBehaviour
 {
     private Component buttonRenderer;
     public VictimManager manager;
+    public Animator animator;
 
     public Renderer buttonHighlightRenderer;
 
@@ -16,6 +17,7 @@ public class ButtonOutcome : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
+        animator.SetTrigger("Freedom Stamp");
         manager.FreedomChoice();
         buttonHighlightRenderer.material.color = Color.clear;
     }
