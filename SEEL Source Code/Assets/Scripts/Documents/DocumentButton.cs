@@ -7,16 +7,17 @@ public class DocumentButton : MonoBehaviour
     private Renderer documentButton;
     public Document documentScript;
     public Animator documentAnimator;
+    public Transform documentUI;
     //public Transform documentUIs[];
     public List<Transform> documents;
     public Color outlineRed;
+    private bool canPickUp = true;
 
     private bool canPickUpDocument = true;
 
     void Start()
     {
         documentButton = GetComponent<Renderer>();
-        documentAnimator.SetBool("CanPickUpDocument", true);
     }
     private void OnMouseEnter()
     {
@@ -29,35 +30,36 @@ public class DocumentButton : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        documentAnimator.SetTrigger("PickUpDocument");
-
-        foreach (Transform t in documents)
+        if(canPickUp)
         {
-            //documents.
+            PickUp();
         }
+        else 
+        {
+            PutDown();
+        }
+        //documentAnimator.SetTrigger("PickUpDocument");
+
+    }
+    void PickUp()
+    {
+        documentUI.gameObject.SetActive(true);
+        canPickUp = false;
         /*
-        if (canPickUpDocument)
-        {
-            PickUpDocument();
-        }
-        if(!canPickUpDocument)
-        {
-            PutDownDocument();
-        }
+        documentAnimator.SetTrigger("PickUpDocument");
+        StartCoroutine(OpenUI());
         */
     }
-    /*
-    void PickUpDocument()
+    void PutDown()
     {
+        //documentAnimator.SetTrigger("PutDownDocument");
+        documentUI.gameObject.SetActive(false);
+        canPickUp = true;
+    }
 
-        documentAnimator.SetBool("CanPickUpDocument", true);
-        //canPickUpDocument = false;
-    }
-    void PutDownDocument()
+    IEnumerator OpenUI()
     {
-        documentAnimator.SetTrigger("PutDownDocument");
-        documentAnimator.SetBool("CanPickUpDocument", false);
-        //canPickUpDocument = true;
+        yield return new WaitForSeconds(1);
+        documentUI.gameObject.SetActive(true);
     }
-        */
 }

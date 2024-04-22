@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class VictimManager : MonoBehaviour
@@ -80,6 +81,7 @@ public class VictimManager : MonoBehaviour
     {
         Debug.Log("All people have been selected once");
         // DAY 2
+        SceneManager.LoadScene("Start Menu");
     }
 
     private void Start()
@@ -119,9 +121,13 @@ public class VictimManager : MonoBehaviour
 
     public void FreedomChoice()
     {
+        /*
         AudioClip freedomRandomClip = victimData.freedomDialogue[Random.Range(0, victimData.freedomDialogue.Count)];
         victimData.victimAudioSource.clip = freedomRandomClip;
         victimData.victimAudioSource.Play();
+        */
+        victimData.freedomSubtitles.gameObject.SetActive(true);
+        victimData.subtitleBackground.gameObject.SetActive(true);
         EveryChoice();
         Debug.Log("Freedom");
         fateNumber += victimData.freedom;
@@ -130,9 +136,13 @@ public class VictimManager : MonoBehaviour
     }
     public void PrisonChoice()
     {
+        /*
         AudioClip prisonRandomClip = victimData.prisonDialogue[Random.Range(0, victimData.prisonDialogue.Count)];
         victimData.victimAudioSource.clip = prisonRandomClip;
         victimData.victimAudioSource.Play();
+        */
+        victimData.prisonSubtitles.gameObject.SetActive(true);
+        victimData.subtitleBackground.gameObject.SetActive(true);
         EveryChoice();
         Debug.Log("Prison");
         fateNumber += victimData.prison;
@@ -141,9 +151,13 @@ public class VictimManager : MonoBehaviour
     }
     public void DeathChoice()
     {
+        /*
         AudioClip deathRandomClip = victimData.deathDialogue[Random.Range(0, victimData.deathDialogue.Count)];
         victimData.victimAudioSource.clip = deathRandomClip;
         victimData.victimAudioSource.Play();
+        */
+        victimData.deathSubtitles.gameObject.SetActive(true);
+        victimData.subtitleBackground.gameObject.SetActive(true);
         EveryChoice();
         Debug.Log("Death");
         fateNumber += victimData.death;
@@ -168,6 +182,11 @@ public class VictimManager : MonoBehaviour
 
         doorAnimationControl.leftDoorAnimation.SetTrigger("LeftOpen");
         doorAnimationControl.doorOpening.PlayDelayed(0.39f);
+        victimData.freedomSubtitles.gameObject.SetActive(false);
+        victimData.prisonSubtitles.gameObject.SetActive(false);
+        victimData.deathSubtitles.gameObject.SetActive(false);
+        victimData.subtitleBackground.gameObject.SetActive(false);
+
         StartCoroutine(AfterChoice());
     }
     IEnumerator AfterChoice()
@@ -193,6 +212,7 @@ public class VictimManager : MonoBehaviour
 
     public IEnumerator GetNextPerson()
     {
+
         yield return new WaitForSeconds(2f);
 
 

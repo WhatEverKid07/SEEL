@@ -8,6 +8,7 @@ public class VictimData : MonoBehaviour
     public VictimManager victimManager;
     public AudioSource victimAudioSource;
 
+    public Transform subtitleBackground;
     [Header("Numbers")]
     public int freedom;
     public int prison;
@@ -15,12 +16,16 @@ public class VictimData : MonoBehaviour
 
     [Header("Freedom Dialogue")]
     public List<AudioClip> freedomDialogue;
+    public Transform freedomSubtitles;
 
     [Header("Prison Dialogue")]
     public List<AudioClip> prisonDialogue;
+    public Transform prisonSubtitles;
 
     [Header("Death Dialogue")]
     public List<AudioClip> deathDialogue;
+    public Transform deathSubtitles;
+
     private void Start()
     {
         victimAudioSource = GetComponent<AudioSource>();
