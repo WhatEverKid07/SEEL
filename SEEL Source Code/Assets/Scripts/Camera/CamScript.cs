@@ -14,6 +14,11 @@ public class CamScript : MonoBehaviour
     public Transform documentOutline4;
     public Transform documentOutline5;
 
+    [Header("---Stamp Outlines---")]
+    public Transform freedomStampOutline;
+    public Transform prisonStampOutline;
+    public Transform deathStampOutline;
+
     [Header("---Buttons---")]
     public Button leftTurnButton;
     public Button leftTurnButton2;
@@ -117,7 +122,13 @@ public class CamScript : MonoBehaviour
         documentOutline2.gameObject.SetActive(true);
         documentOutline3.gameObject.SetActive(true);
         documentOutline4.gameObject.SetActive(true);
-        documentOutline4.gameObject.SetActive(true);
+        documentOutline5.gameObject.SetActive(true);
+
+        /*
+        freedomStampOutline.gameObject.SetActive(true);
+        prisonStampOutline.gameObject.SetActive(true);
+        deathStampOutline.gameObject.SetActive(true);
+        */
     }
     void LeftSide()
     {
@@ -133,6 +144,12 @@ public class CamScript : MonoBehaviour
         documentOutline3.gameObject.SetActive(false);
         documentOutline4.gameObject.SetActive(false);
         documentOutline5.gameObject.SetActive(false);
+
+        /*
+        freedomStampOutline.gameObject.SetActive(false);
+        prisonStampOutline.gameObject.SetActive(false);
+        deathStampOutline.gameObject.SetActive(false);
+        */
     }
     void RightSide()
     {
@@ -148,6 +165,12 @@ public class CamScript : MonoBehaviour
         documentOutline3.gameObject.SetActive(false);
         documentOutline4.gameObject.SetActive(false);
         documentOutline5.gameObject.SetActive(false);
+
+        /*
+        freedomStampOutline.gameObject.SetActive(false);
+        prisonStampOutline.gameObject.SetActive(false);
+        deathStampOutline.gameObject.SetActive(false);
+        */
     }
     void BottomSide()
     {

@@ -81,7 +81,7 @@ public class VictimManager : MonoBehaviour
     {
         Debug.Log("All people have been selected once");
         // DAY 2
-        SceneManager.LoadScene("Start Menu");
+        SceneManager.LoadScene("Demo End");
     }
 
     private void Start()
