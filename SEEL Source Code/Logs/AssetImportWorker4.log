@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.4f1 (35713cd46cd7) revision 3502396'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Professional' Language: 'en' Physical Memory: 32682 MB
+OS: 'Windows 11  (10.0.22621) 64bit Professional' Language: 'en' Physical Memory: 16295 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -15,7 +15,7 @@ C:/Users/ecallegari-l2023/Documents/GitHub/SEEL/SEEL Source Code
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-50056
+51192
 Successfully changed project path to: C:/Users/ecallegari-l2023/Documents/GitHub/SEEL/SEEL Source Code
 C:/Users/ecallegari-l2023/Documents/GitHub/SEEL/SEEL Source Code
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,11 +49,11 @@ C:/Users/ecallegari-l2023/Documents/GitHub/SEEL/SEEL Source Code
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [23820] Host "[IP] 192.168.102.176 [Port] 0 [Flags] 2 [Guid] 2120973093 [EditorId] 2120973093 [Version] 1048832 [Id] WindowsEditor(7,ELAM-122-142) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [23888] Host "[IP] 192.168.104.71 [Port] 0 [Flags] 2 [Guid] 1654805218 [EditorId] 1654805218 [Version] 1048832 [Id] WindowsEditor(7,ELAM-014-5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [23820] Host "[IP] 192.168.102.176 [Port] 0 [Flags] 2 [Guid] 2120973093 [EditorId] 2120973093 [Version] 1048832 [Id] WindowsEditor(7,ELAM-122-142) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [23888] Host "[IP] 192.168.104.71 [Port] 0 [Flags] 2 [Guid] 1654805218 [EditorId] 1654805218 [Version] 1048832 [Id] WindowsEditor(7,ELAM-014-5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 15.06 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 13.90 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.4f1 (35713cd46cd7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -69,48 +69,48 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56612
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56092
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.009531 seconds.
-- Loaded All Assemblies, in  0.291 seconds
+Registered in 0.009777 seconds.
+- Loaded All Assemblies, in  0.270 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 283 ms
+Android Extension - Scanning For ADB Devices 287 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.524 seconds
-Domain Reload Profiling: 813ms
-	BeginReloadAssembly (97ms)
+- Finished resetting the current domain, in  0.520 seconds
+Domain Reload Profiling: 789ms
+	BeginReloadAssembly (86ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (110ms)
-		LoadAssemblies (97ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (105ms)
+		LoadAssemblies (85ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (104ms)
-			TypeCache.Refresh (103ms)
-				TypeCache.ScanAssembly (95ms)
+		AnalyzeDomain (98ms)
+			TypeCache.Refresh (98ms)
+				TypeCache.ScanAssembly (89ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (524ms)
+	FinalizeReload (521ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (485ms)
+		SetupLoadedEditorAssemblies (482ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (378ms)
+			InitializePlatformSupportModulesInManaged (377ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (69ms)
+			ProcessInitializeOnLoadAttributes (68ms)
 			ProcessInitializeOnLoadMethodAttributes (33ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
@@ -119,55 +119,57 @@ Domain Reload Profiling: 813ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
+Symbol file data-00000190840AE020 doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.598 seconds
-Refreshing native plugins compatible for Editor in 6.39 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.251 seconds
+Refreshing native plugins compatible for Editor in 6.57 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.388 seconds
-Domain Reload Profiling: 984ms
-	BeginReloadAssembly (118ms)
+- Finished resetting the current domain, in  0.375 seconds
+Domain Reload Profiling: 1624ms
+	BeginReloadAssembly (114ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (15ms)
-	RebuildCommonClasses (25ms)
+	RebuildCommonClasses (24ms)
 	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (34ms)
-	LoadAllAssembliesAndSetupDomain (411ms)
-		LoadAssemblies (267ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (1068ms)
+		LoadAssemblies (916ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (213ms)
-			TypeCache.Refresh (199ms)
-				TypeCache.ScanAssembly (189ms)
-			ScanForSourceGeneratedMonoScriptInfo (11ms)
+		AnalyzeDomain (218ms)
+			TypeCache.Refresh (204ms)
+				TypeCache.ScanAssembly (194ms)
+			ScanForSourceGeneratedMonoScriptInfo (10ms)
 			ResolveRequiredComponents (4ms)
-	FinalizeReload (389ms)
+	FinalizeReload (375ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (272ms)
+		SetupLoadedEditorAssemblies (261ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (20ms)
+			InitializePlatformSupportModulesInManaged (19ms)
 			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (45ms)
-			ProcessInitializeOnLoadAttributes (186ms)
-			ProcessInitializeOnLoadMethodAttributes (14ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			BeforeProcessingInitializeOnLoad (43ms)
+			ProcessInitializeOnLoadAttributes (179ms)
+			ProcessInitializeOnLoadMethodAttributes (12ms)
+			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 6.16 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 6.01 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3436 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 56 unused Assets / (1.4 MB). Loaded Objects now: 3896.
+Unloading 3437 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 56 unused Assets / (1.4 MB). Loaded Objects now: 3897.
 Memory consumption went from 217.8 MB to 216.5 MB.
-Total: 2.763400 ms (FindLiveObjects: 0.207400 ms CreateObjectMapping: 0.122500 ms MarkObjects: 2.174200 ms  DeleteObjects: 0.258600 ms)
+Total: 3.465900 ms (FindLiveObjects: 0.201700 ms CreateObjectMapping: 0.119800 ms MarkObjects: 2.879900 ms  DeleteObjects: 0.263800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -184,308 +186,376 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 2067.756689 seconds.
-  path: Assets/UI/Subtitles/Kai Ree/Death2.png
-  artifactKey: Guid(e144af5ba6720cd4b92303cc93a11f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Kai Ree/Death2.png using Guid(e144af5ba6720cd4b92303cc93a11f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1c4f825f54f0b056f005d0ea6084f01') in 0.056866 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/UI/Subtitles/Kai Ree/Prison3.png
-  artifactKey: Guid(021d56d68b33be64e826198fe3a429eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Kai Ree/Prison3.png using Guid(021d56d68b33be64e826198fe3a429eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be6a58f9553c19b65f7eea651531d617') in 0.009368 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/UI/Subtitles/Kai Ree/Prison2.png
-  artifactKey: Guid(48dc168f3d237014e828a95e1d637e6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Kai Ree/Prison2.png using Guid(48dc168f3d237014e828a95e1d637e6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e26a58445a69225d92e0197443ef6007') in 0.008399 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 38.701403 seconds.
-  path: Assets/UI/Subtitles/Ethel Proth
-  artifactKey: Guid(24143948c2cf5da40a57ccadedd76fc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Ethel Proth using Guid(24143948c2cf5da40a57ccadedd76fc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e49cf544ba5b9a48bd2b34c8d0cc8ca') in 0.000401 seconds
+  Time since last request: 5520.255239 seconds.
+  path: Assets/Scripts/Buttons/ButtonHighlight.cs
+  artifactKey: Guid(2ddaf81be114f944db61094f4892c2b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Buttons/ButtonHighlight.cs using Guid(2ddaf81be114f944db61094f4892c2b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ece64abb0f15471f127d2a8c86bdcc42') in 0.002031 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
-Received Import Request.
-  Time since last request: 0.083393 seconds.
-  path: Assets/UI/Subtitles/Ethel Proth/Freedom 1.png
-  artifactKey: Guid(fc23b241838631c4fbe8a4a31a7919c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Ethel Proth/Freedom 1.png using Guid(fc23b241838631c4fbe8a4a31a7919c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4d665be7c9cc7308b677f5b0a57a808') in 0.032768 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019082B5C110 doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.582 seconds
+Refreshing native plugins compatible for Editor in 6.90 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.249 seconds
+Domain Reload Profiling: 1829ms
+	BeginReloadAssembly (137ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (387ms)
+		LoadAssemblies (257ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (202ms)
+			TypeCache.Refresh (199ms)
+				TypeCache.ScanAssembly (189ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1250ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (295ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (23ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (55ms)
+			ProcessInitializeOnLoadAttributes (193ms)
+			ProcessInitializeOnLoadMethodAttributes (15ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 7.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3386 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (1.3 MB). Loaded Objects now: 3912.
+Memory consumption went from 205.9 MB to 204.6 MB.
+Total: 2.843400 ms (FindLiveObjects: 0.254400 ms CreateObjectMapping: 0.159100 ms MarkObjects: 2.189600 ms  DeleteObjects: 0.239400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019082B5C110 doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.585 seconds
+Refreshing native plugins compatible for Editor in 6.57 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.239 seconds
+Domain Reload Profiling: 1820ms
+	BeginReloadAssembly (135ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (381ms)
+		LoadAssemblies (258ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (193ms)
+			TypeCache.Refresh (190ms)
+				TypeCache.ScanAssembly (181ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1239ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (292ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (22ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (58ms)
+			ProcessInitializeOnLoadAttributes (188ms)
+			ProcessInitializeOnLoadMethodAttributes (15ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 7.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3387 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (1.3 MB). Loaded Objects now: 3927.
+Memory consumption went from 206.2 MB to 204.9 MB.
+Total: 2.759700 ms (FindLiveObjects: 0.213200 ms CreateObjectMapping: 0.131400 ms MarkObjects: 2.174800 ms  DeleteObjects: 0.239600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file data-00000190D49F16A0 doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.575 seconds
+Refreshing native plugins compatible for Editor in 6.54 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.225 seconds
+Domain Reload Profiling: 1797ms
+	BeginReloadAssembly (135ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (380ms)
+		LoadAssemblies (260ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (192ms)
+			TypeCache.Refresh (188ms)
+				TypeCache.ScanAssembly (180ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1225ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (292ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (54ms)
+			ProcessInitializeOnLoadAttributes (190ms)
+			ProcessInitializeOnLoadMethodAttributes (17ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 8.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3387 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (1.3 MB). Loaded Objects now: 3942.
+Memory consumption went from 206.2 MB to 204.9 MB.
+Total: 2.940700 ms (FindLiveObjects: 0.269400 ms CreateObjectMapping: 0.161100 ms MarkObjects: 2.290700 ms  DeleteObjects: 0.218700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file data-000001903E62AE60 doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.623 seconds
+Refreshing native plugins compatible for Editor in 6.63 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.248 seconds
+Domain Reload Profiling: 1868ms
+	BeginReloadAssembly (141ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (421ms)
+		LoadAssemblies (307ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (185ms)
+			TypeCache.Refresh (181ms)
+				TypeCache.ScanAssembly (172ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1248ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (281ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (23ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (52ms)
+			ProcessInitializeOnLoadAttributes (184ms)
+			ProcessInitializeOnLoadMethodAttributes (14ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 7.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3387 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (1.3 MB). Loaded Objects now: 3957.
+Memory consumption went from 206.2 MB to 204.9 MB.
+Total: 3.218600 ms (FindLiveObjects: 0.217700 ms CreateObjectMapping: 0.129100 ms MarkObjects: 2.648700 ms  DeleteObjects: 0.222300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file data-0000019091D88020 doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.584 seconds
+Refreshing native plugins compatible for Editor in 7.29 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.131 seconds
+Domain Reload Profiling: 1714ms
+	BeginReloadAssembly (132ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (393ms)
+		LoadAssemblies (266ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (195ms)
+			TypeCache.Refresh (191ms)
+				TypeCache.ScanAssembly (181ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1132ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (255ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (43ms)
+			ProcessInitializeOnLoadAttributes (168ms)
+			ProcessInitializeOnLoadMethodAttributes (15ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 7.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3387 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (1.3 MB). Loaded Objects now: 3972.
+Memory consumption went from 206.2 MB to 204.9 MB.
+Total: 2.775400 ms (FindLiveObjects: 0.201300 ms CreateObjectMapping: 0.115300 ms MarkObjects: 2.247200 ms  DeleteObjects: 0.211000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 46.419970 seconds.
-  path: Assets/UI/Subtitles/Ethel Proth/Freedom 1.png
-  artifactKey: Guid(fc23b241838631c4fbe8a4a31a7919c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Ethel Proth/Freedom 1.png using Guid(fc23b241838631c4fbe8a4a31a7919c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e4195fd628a5717f663f76a6b24b899') in 0.008917 seconds
+  Time since last request: 266.411797 seconds.
+  path: Assets/Environment/BigWindow.fbx
+  artifactKey: Guid(dd279fec32058394b970e149c2287644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment/BigWindow.fbx using Guid(dd279fec32058394b970e149c2287644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0b7289467f8169eb35040b1116dcfe2') in 0.169699 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 812.856206 seconds.
-  path: Assets/UI/Subtitles/Ethel Proth/Death1.png
-  artifactKey: Guid(599aa01ff54004a43a6ef042d17b98c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Ethel Proth/Death1.png using Guid(599aa01ff54004a43a6ef042d17b98c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e4742ecee3017d47a104097a9559578') in 0.036841 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 94
 ========================================================================
 Received Import Request.
   Time since last request: 0.000018 seconds.
-  path: Assets/UI/Subtitles/Ethel Proth/Freedom3.png
-  artifactKey: Guid(e88453b23f1b2d647a94656cb0f535d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Ethel Proth/Freedom3.png using Guid(e88453b23f1b2d647a94656cb0f535d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b86658978d4305003e33546a43856177') in 0.013388 seconds
+  path: Assets/Environment/desk.fbx
+  artifactKey: Guid(aaddbaa4e961b1c4c90fc4cbd9888361) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment/desk.fbx using Guid(aaddbaa4e961b1c4c90fc4cbd9888361) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea380e214c4e9550bf040872cc2c058b') in 0.172628 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 76
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/UI/Subtitles/Ethel Proth/Prison3.png
-  artifactKey: Guid(370abf14e7d4f444aa527064c936275d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Ethel Proth/Prison3.png using Guid(370abf14e7d4f444aa527064c936275d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3357e5d1e1c6b6ca1d84847184709552') in 0.023170 seconds
+  Time since last request: 0.000019 seconds.
+  path: Assets/Environment/DOOOORime (1).fbx
+  artifactKey: Guid(3d2d67f808e5b8943b1adaa8126cece5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Environment/DOOOORime (1).fbx using Guid(3d2d67f808e5b8943b1adaa8126cece5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a4e4b611495fd0d74fa709f051ffd69') in 0.047822 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 7.552849 seconds.
-  path: Assets/UI/Subtitles/Ethel Proth/Death2.png
-  artifactKey: Guid(9b1054e40b39f944797576b62610a20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Ethel Proth/Death2.png using Guid(9b1054e40b39f944797576b62610a20c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f17e7e7d1775e16842bca16d3784128') in 0.009592 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.022834 seconds.
-  path: Assets/UI/Subtitles/Ethel Proth/Death1.png
-  artifactKey: Guid(599aa01ff54004a43a6ef042d17b98c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Ethel Proth/Death1.png using Guid(599aa01ff54004a43a6ef042d17b98c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9897758fe7cb3622075c7e574e0f35a1') in 0.078219 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000074 seconds.
-  path: Assets/UI/Subtitles/Ethel Proth/Prison3.png
-  artifactKey: Guid(370abf14e7d4f444aa527064c936275d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Ethel Proth/Prison3.png using Guid(370abf14e7d4f444aa527064c936275d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '146b9056f6805d2c0dd7afed3e543bd2') in 0.038879 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 11.882358 seconds.
-  path: Assets/UI/Subtitles/Agatha White
-  artifactKey: Guid(894c55e65420b7a4bb85f648ef2bd253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Agatha White using Guid(894c55e65420b7a4bb85f648ef2bd253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f65d8e60d19936848925a27506884905') in 0.001091 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.067129 seconds.
-  path: Assets/UI/Subtitles/Agatha White/Death1.png
-  artifactKey: Guid(76043f7d46dbf944498a0760532897e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Agatha White/Death1.png using Guid(76043f7d46dbf944498a0760532897e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76bd5c7c3094c88f5ab9a5b255b979f7') in 0.007413 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/UI/Subtitles/Agatha White/Prison1.png
-  artifactKey: Guid(fc90fe298c710e24baf156d8f0ad1926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Agatha White/Prison1.png using Guid(fc90fe298c710e24baf156d8f0ad1926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d0c39cdbefb7b0bbf4094f3e8db6331') in 0.030908 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/UI/Subtitles/Agatha White/Prison3.png
-  artifactKey: Guid(ae1a6cc001f081b43898e8e5aa861207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Agatha White/Prison3.png using Guid(ae1a6cc001f081b43898e8e5aa861207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1fdec41798d06c059fceb66bf1cd2ab') in 0.006165 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 8.813680 seconds.
-  path: Assets/UI/Subtitles/Agatha White/Death3.png
-  artifactKey: Guid(71b152946fac89646a6e46a7df1fa7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Agatha White/Death3.png using Guid(71b152946fac89646a6e46a7df1fa7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '303671411d5aac3e0ae513032f5520a6') in 0.007748 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.025321 seconds.
-  path: Assets/UI/Subtitles/Agatha White/Death1.png
-  artifactKey: Guid(76043f7d46dbf944498a0760532897e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Agatha White/Death1.png using Guid(76043f7d46dbf944498a0760532897e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47febdc82c65aa7d1136813f609356ff') in 0.009484 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/UI/Subtitles/Agatha White/Prison1.png
-  artifactKey: Guid(fc90fe298c710e24baf156d8f0ad1926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Agatha White/Prison1.png using Guid(fc90fe298c710e24baf156d8f0ad1926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cee13f2e0f90ffc75a81b4a533f0c57e') in 0.009012 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/UI/Subtitles/Agatha White/Prison3.png
-  artifactKey: Guid(ae1a6cc001f081b43898e8e5aa861207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Agatha White/Prison3.png using Guid(ae1a6cc001f081b43898e8e5aa861207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '515129a04d46ce192ed2167ba240f916') in 0.008957 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 457.252229 seconds.
-  path: Assets/UI/Subtitles/Soft Krullivan
-  artifactKey: Guid(d15d601cfc4370d409ee64739bac76bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Soft Krullivan using Guid(d15d601cfc4370d409ee64739bac76bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dec82a03ff598d9327aedc4c26943073') in 0.000428 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.076104 seconds.
-  path: Assets/UI/Subtitles/Soft Krullivan/Death1.png
-  artifactKey: Guid(420f09404cffaeb44ae750fd6fd90a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Soft Krullivan/Death1.png using Guid(420f09404cffaeb44ae750fd6fd90a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5a5f2b20fc09b1d141e1328161ac418') in 0.007426 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.002890 seconds.
-  path: Assets/UI/Subtitles/Soft Krullivan/Freedom2.png
-  artifactKey: Guid(3dbb83559c59c7b458eae6f6690df7cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Soft Krullivan/Freedom2.png using Guid(3dbb83559c59c7b458eae6f6690df7cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e51f13ed5ba184e501d11d56d81e2fd6') in 0.008358 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/UI/Subtitles/Soft Krullivan/Prison3.png
-  artifactKey: Guid(c2ed887df20650b48b056bf91af58b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Soft Krullivan/Prison3.png using Guid(c2ed887df20650b48b056bf91af58b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d282dbfddacff3196f6ad07821083fe') in 0.006785 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/UI/Subtitles/Soft Krullivan/Freedom1.png
-  artifactKey: Guid(dd7a3235904dfc44c91d2ef3fe794763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Soft Krullivan/Freedom1.png using Guid(dd7a3235904dfc44c91d2ef3fe794763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8da27cac8b41b66c8ae878241cc6d85b') in 0.006455 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 4.544620 seconds.
-  path: Assets/UI/Subtitles/Soft Krullivan/Prison3.png
-  artifactKey: Guid(c2ed887df20650b48b056bf91af58b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Soft Krullivan/Prison3.png using Guid(c2ed887df20650b48b056bf91af58b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5eb7fea7446ffeffebf17d56eaed13c7') in 0.013423 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.022398 seconds.
-  path: Assets/UI/Subtitles/Soft Krullivan/Death1.png
-  artifactKey: Guid(420f09404cffaeb44ae750fd6fd90a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Soft Krullivan/Death1.png using Guid(420f09404cffaeb44ae750fd6fd90a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7529d7b383269f97fd425e5efce8b481') in 0.037241 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/UI/Subtitles/Soft Krullivan/Prison1.png
-  artifactKey: Guid(1d8b51a6ea64ab346907ec9e68ca133b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Soft Krullivan/Prison1.png using Guid(1d8b51a6ea64ab346907ec9e68ca133b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '481577f09dde883c906309d1c23beb86') in 0.035041 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000057 seconds.
-  path: Assets/UI/Subtitles/Soft Krullivan/Death3.png
-  artifactKey: Guid(c9b32ce30d8db1c4ba055417b90fe7b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Soft Krullivan/Death3.png using Guid(c9b32ce30d8db1c4ba055417b90fe7b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b01c6c89b893c64cb08388f346c2b6b') in 0.032676 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 51.697830 seconds.
-  path: Assets/UI/Subtitles/Tar Darlow
-  artifactKey: Guid(10a9eee2768578144941393d6a901447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Tar Darlow using Guid(10a9eee2768578144941393d6a901447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9876629cde9e704f92ab7033cc845201') in 0.000402 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.067946 seconds.
-  path: Assets/UI/Subtitles/Tar Darlow/Death1.png
-  artifactKey: Guid(6732b1a51b649564eb71071dadf2cc7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Tar Darlow/Death1.png using Guid(6732b1a51b649564eb71071dadf2cc7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58906bdb14f26cc09196b3982728ca07') in 0.006182 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/UI/Subtitles/Tar Darlow/Freedom3.png
-  artifactKey: Guid(1c74ac4635954ed43928e45aeb692a34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Tar Darlow/Freedom3.png using Guid(1c74ac4635954ed43928e45aeb692a34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93ae80563ed966a783c2225349c1696b') in 0.008759 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/UI/Subtitles/Tar Darlow/Freedom2.png
-  artifactKey: Guid(6a73e182fd388ee4698e4b1860fd3e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Tar Darlow/Freedom2.png using Guid(6a73e182fd388ee4698e4b1860fd3e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abc66e26a0a0dc57be3198cb22ccd9a1') in 0.025753 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/UI/Subtitles/Tar Darlow/Prison1.png
-  artifactKey: Guid(3f47f5b6f3466154eb879400683e0d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Tar Darlow/Prison1.png using Guid(3f47f5b6f3466154eb879400683e0d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff2dbdcde532b7ccf62ff2b6f4e1eb9c') in 0.021369 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 4.297300 seconds.
-  path: Assets/UI/Subtitles/Tar Darlow/Freedom1.png
-  artifactKey: Guid(5e4eb3f59bd4b014f9232174d4d4b8d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Tar Darlow/Freedom1.png using Guid(5e4eb3f59bd4b014f9232174d4d4b8d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc7e61bdcd5266a793f9780c68f5e544') in 0.008206 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.038755 seconds.
-  path: Assets/UI/Subtitles/Tar Darlow/Death1.png
-  artifactKey: Guid(6732b1a51b649564eb71071dadf2cc7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Tar Darlow/Death1.png using Guid(6732b1a51b649564eb71071dadf2cc7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4023c0c25f13b40c0cfdfa45d8b13355') in 0.008475 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/UI/Subtitles/Tar Darlow/Freedom3.png
-  artifactKey: Guid(1c74ac4635954ed43928e45aeb692a34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Tar Darlow/Freedom3.png using Guid(1c74ac4635954ed43928e45aeb692a34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f993ba76e946f17a55e5eed70492ff8') in 0.008277 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/UI/Subtitles/Tar Darlow/Freedom2.png
-  artifactKey: Guid(6a73e182fd388ee4698e4b1860fd3e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/Subtitles/Tar Darlow/Freedom2.png using Guid(6a73e182fd388ee4698e4b1860fd3e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f910dc83de8f175426bea27547266d83') in 0.008069 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 41
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
 AssetImportWorker is now disconnected from the server
