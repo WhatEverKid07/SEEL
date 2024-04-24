@@ -8,12 +8,16 @@ ScriptsOnlyBuild:
     - ButtonOutcome3
     - CamScript
     - CameraTwin
+    - ComputerScript
+    - DemoEnd
     - Document
     - DocumentButton
+    - Document_DrawerAnimationController
     - DoorAnimationControl
     - FirstWaypoint
     - LightFlickerEffect
     - MainMenu
+    - NextVictim
     - PauseMenu
     - Rotate
     - ScriptFlickering
@@ -90,54 +94,12 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
-  - assembly: Assembly-CSharp
-    fullTypeName: CamScript
-    methodName: LeftTurn
-  - assembly: Assembly-CSharp
-    fullTypeName: VolumeSlider
-    methodName: VolumeUpdate
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: Assembly-CSharp
-    fullTypeName: CamScript
-    methodName: RightTurn2
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: Assembly-CSharp
-    fullTypeName: CamScript
-    methodName: LeftTurn2
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: Assembly-CSharp
-    fullTypeName: CamScript
-    methodName: BottomTurn
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: Assembly-CSharp
-    fullTypeName: CamScript
-    methodName: RightTurn
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenu
-    methodName: Resume
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: Play
-  - assembly: Assembly-CSharp
-    fullTypeName: CamScript
-    methodName: UpTurn
-  - assembly: Assembly-CSharp
-    fullTypeName: VolumeSlider
-    methodName: VolumeUpdate
-  - assembly: Assembly-CSharp
-    fullTypeName: VolumeSlider
-    methodName: VolumeUpdate
   - assembly: Assembly-CSharp
     fullTypeName: VolumeSlider
     methodName: VolumeUpdate
@@ -147,6 +109,12 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: VolumeSlider
     methodName: VolumeUpdate
@@ -195,7 +163,102 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: Play
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: CamScript
+    methodName: LeftTurn
+  - assembly: Assembly-CSharp
+    fullTypeName: VolumeSlider
+    methodName: VolumeUpdate
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: CamScript
+    methodName: RightTurn2
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: CamScript
+    methodName: LeftTurn2
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: CamScript
+    methodName: RightTurn
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Resume
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: CamScript
+    methodName: UpTurn
+  - assembly: Assembly-CSharp
+    fullTypeName: VolumeSlider
+    methodName: VolumeUpdate
+  - assembly: Assembly-CSharp
+    fullTypeName: ComputerScript
+    methodName: LeavePCScreen
+  - assembly: Assembly-CSharp
+    fullTypeName: VolumeSlider
+    methodName: VolumeUpdate
   sceneClasses:
+    Assets/Scenes/Demo End.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 16966}
+    - Class: 114
+      Script: {instanceID: 17526}
+    - Class: 114
+      Script: {instanceID: 18066}
+    - Class: 114
+      Script: {instanceID: 18280}
+    - Class: 114
+      Script: {instanceID: 21296}
+    - Class: 114
+      Script: {instanceID: 21796}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/Game.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -214,8 +277,6 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
@@ -244,70 +305,70 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17236}
     - Class: 114
-      Script: {instanceID: 17612}
+      Script: {instanceID: 17806}
     - Class: 114
-      Script: {instanceID: 17804}
+      Script: {instanceID: 17822}
     - Class: 114
-      Script: {instanceID: 17820}
+      Script: {instanceID: 17910}
     - Class: 114
-      Script: {instanceID: 17908}
+      Script: {instanceID: 17962}
     - Class: 114
-      Script: {instanceID: 17960}
+      Script: {instanceID: 18066}
     - Class: 114
-      Script: {instanceID: 18064}
+      Script: {instanceID: 18250}
     - Class: 114
-      Script: {instanceID: 18276}
+      Script: {instanceID: 18280}
     - Class: 114
-      Script: {instanceID: 18586}
+      Script: {instanceID: 18332}
     - Class: 114
-      Script: {instanceID: 18900}
+      Script: {instanceID: 18592}
     - Class: 114
-      Script: {instanceID: 19542}
+      Script: {instanceID: 18906}
     - Class: 114
-      Script: {instanceID: 19656}
-    - Class: 114
-      Script: {instanceID: 19660}
-    - Class: 114
-      Script: {instanceID: 19924}
+      Script: {instanceID: 19666}
     - Class: 114
       Script: {instanceID: 19930}
     - Class: 114
-      Script: {instanceID: 20304}
+      Script: {instanceID: 20310}
     - Class: 114
-      Script: {instanceID: 20586}
+      Script: {instanceID: 20592}
     - Class: 114
-      Script: {instanceID: 20626}
+      Script: {instanceID: 20632}
     - Class: 114
-      Script: {instanceID: 20700}
+      Script: {instanceID: 20706}
     - Class: 114
-      Script: {instanceID: 21170}
+      Script: {instanceID: 21176}
     - Class: 114
-      Script: {instanceID: 21290}
+      Script: {instanceID: 21296}
     - Class: 114
-      Script: {instanceID: 21464}
+      Script: {instanceID: 21470}
     - Class: 114
-      Script: {instanceID: 21600}
+      Script: {instanceID: 21606}
     - Class: 114
-      Script: {instanceID: 21790}
+      Script: {instanceID: 21796}
     - Class: 114
-      Script: {instanceID: 22304}
+      Script: {instanceID: 21814}
     - Class: 114
-      Script: {instanceID: 22412}
+      Script: {instanceID: 22314}
     - Class: 114
-      Script: {instanceID: 22866}
+      Script: {instanceID: 22422}
     - Class: 114
-      Script: {instanceID: 23176}
+      Script: {instanceID: 22876}
     - Class: 114
-      Script: {instanceID: 23414}
+      Script: {instanceID: 23186}
     - Class: 114
-      Script: {instanceID: 23594}
+      Script: {instanceID: 23424}
     - Class: 114
-      Script: {instanceID: 23642}
+      Script: {instanceID: 23604}
+    - Class: 114
+      Script: {instanceID: 23652}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -334,6 +395,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -349,25 +412,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16966}
     - Class: 114
-      Script: {instanceID: 18064}
+      Script: {instanceID: 17614}
     - Class: 114
-      Script: {instanceID: 18276}
+      Script: {instanceID: 18066}
     - Class: 114
-      Script: {instanceID: 18586}
+      Script: {instanceID: 18280}
     - Class: 114
-      Script: {instanceID: 18900}
+      Script: {instanceID: 18592}
     - Class: 114
-      Script: {instanceID: 20626}
+      Script: {instanceID: 18906}
     - Class: 114
-      Script: {instanceID: 20700}
+      Script: {instanceID: 19548}
     - Class: 114
-      Script: {instanceID: 21290}
+      Script: {instanceID: 19662}
     - Class: 114
-      Script: {instanceID: 21464}
+      Script: {instanceID: 19936}
     - Class: 114
-      Script: {instanceID: 21784}
+      Script: {instanceID: 20632}
+    - Class: 114
+      Script: {instanceID: 20706}
+    - Class: 114
+      Script: {instanceID: 21296}
+    - Class: 114
+      Script: {instanceID: 21470}
     - Class: 114
       Script: {instanceID: 21790}
+    - Class: 114
+      Script: {instanceID: 21796}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -435,7 +506,7 @@ ScriptsOnlyBuild:
     className: Grain
   - hash:
       serializedVersion: 2
-      Hash: 8090da4f66f56b8c88ab9495f85516da
+      Hash: 8b604e86d0ebc1699259bb3b7869e1ad
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Target
@@ -507,6 +578,12 @@ ScriptsOnlyBuild:
     className: CinemachineCollider
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DemoEnd
+  - hash:
+      serializedVersion: 2
       Hash: 967cb4d006527026be03739b2f5cb2e8
     assemblyName: Cinemachine
     namespaceName: Cinemachine
@@ -561,7 +638,7 @@ ScriptsOnlyBuild:
     className: LightFlickerEffect
   - hash:
       serializedVersion: 2
-      Hash: 9da8c5fb099de43599c6ead767f8b173
+      Hash: b3c068697026976ef36d3b37d26dc1dc
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: DocumentButton
@@ -573,7 +650,7 @@ ScriptsOnlyBuild:
     className: PostProcessLayer
   - hash:
       serializedVersion: 2
-      Hash: 03b2c1165b5121ee4f4984dea26241a8
+      Hash: 29422829e1e2ce531e84302aa6f8c1e1
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ButtonOutcome2
@@ -663,6 +740,12 @@ ScriptsOnlyBuild:
     className: CoroutineRunner
   - hash:
       serializedVersion: 2
+      Hash: b926f3e6adad9485bb9b92aeefe4429b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Document_DrawerAnimationController
+  - hash:
+      serializedVersion: 2
       Hash: aa5adfbcb3c4ed0948c412372aab3263
     assemblyName: Unity.Postprocessing.Runtime
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -703,6 +786,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 29422829e1e2ce531e84302aa6f8c1e1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: NextVictim
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1029,7 +1118,7 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
-      Hash: 03b2c1165b5121ee4f4984dea26241a8
+      Hash: 29422829e1e2ce531e84302aa6f8c1e1
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ButtonOutcome
@@ -1083,7 +1172,7 @@ ScriptsOnlyBuild:
     className: MotionBlur
   - hash:
       serializedVersion: 2
-      Hash: fd2b4b8c8d0c48ec8a8aea808d1912f4
+      Hash: 49fcd47cc1c2494387ab7e195ce181e0
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: VictimData
@@ -1401,7 +1490,7 @@ ScriptsOnlyBuild:
     className: CinemachineOrbitalTransposer
   - hash:
       serializedVersion: 2
-      Hash: 4a79618b195010fe5892b0dcb616631a
+      Hash: 9d7a092df3910cace22c5d5685670ead
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: VictimManager
@@ -1527,6 +1616,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
+      Hash: 0933a886c1805f5b8a84b803ca7e7dc2
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ComputerScript
+  - hash:
+      serializedVersion: 2
       Hash: be140ea01a11255b651c097661ac55b1
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1549,6 +1644,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineImpulseListener
+  - hash:
+      serializedVersion: 2
+      Hash: 42f92aa18c381cf5315d25be209a8a67
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UIDocument
   - hash:
       serializedVersion: 2
       Hash: f4f39b64f410b0cd98b49df4bad0eb7e
@@ -1653,7 +1754,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: 03b2c1165b5121ee4f4984dea26241a8
+      Hash: 29422829e1e2ce531e84302aa6f8c1e1
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ButtonOutcome3
@@ -1755,7 +1856,7 @@ ScriptsOnlyBuild:
     className: PostProcessProfile
   - hash:
       serializedVersion: 2
-      Hash: 25f1f074bf1e335d0866f6ddb226596e
+      Hash: 8a273cebd287c2c97a1b61b1f27ff7f9
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CamScript
@@ -1947,6 +2048,7 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 19
   scenePathNames:
-  - Assets/Scenes/Game.unity
   - Assets/Scenes/Start Menu.unity
-  playerPath: C:/Users/ecallegari-l2023/Downloads/SEEL.exe
+  - Assets/Scenes/Game.unity
+  - Assets/Scenes/Demo End.unity
+  playerPath: D:/SEEL.exe
