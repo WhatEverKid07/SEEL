@@ -8,6 +8,14 @@ public class VictimData : MonoBehaviour
     public VictimManager victimManager;
     public AudioSource victimAudioSource;
 
+    public GameObject prisonStampPrint;
+    public GameObject freedomStampPrint;
+    public GameObject deathStampPrint;
+
+    public GameObject prisonStampPrintUI;
+    public GameObject freedomStampPrintUI;
+    public GameObject deathStampPrintUI;
+
     public Transform subtitleBackground;
     [Header("Numbers")]
     public int freedom;
@@ -29,5 +37,12 @@ public class VictimData : MonoBehaviour
     private void Start()
     {
         victimAudioSource = GetComponent<AudioSource>();
+        prisonStampPrint.SetActive(false);
+        deathStampPrint.SetActive(false);
+        freedomStampPrint.SetActive(false);
+
+        prisonStampPrintUI.SetActive(false);
+        deathStampPrintUI.SetActive(false);
+        freedomStampPrintUI.SetActive(false);
     }
 }
