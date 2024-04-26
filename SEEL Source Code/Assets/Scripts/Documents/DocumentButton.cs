@@ -5,15 +5,11 @@ using UnityEngine;
 public class DocumentButton : MonoBehaviour
 {
     private Renderer documentButton;
-    public Document documentScript;
     public Animator documentAnimator;
     public Transform documentUI;
-    //public Transform documentUIs[];
-    public List<Transform> documents;
-    public Color outlineRed;
-    private bool canPickUp = true;
 
-    private bool canPickUpDocument = true;
+    public GameObject[] camButtons;
+    public Color outlineRed;
 
     void Start()
     {
@@ -30,33 +26,13 @@ public class DocumentButton : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if(canPickUp)
-        {
-            PickUp();
-        }
-        else 
-        {
-            PutDown();
-        }
-        //documentAnimator.SetTrigger("PickUpDocument");
-
-    }
-    void PickUp()
-    {
-        documentUI.gameObject.SetActive(true);
-        canPickUp = false;
-        /*
         documentAnimator.SetTrigger("PickUpDocument");
+        foreach (GameObject button in camButtons)
+        {
+            button.SetActive(false);
+        }
         StartCoroutine(OpenUI());
-        */
     }
-    void PutDown()
-    {
-        //documentAnimator.SetTrigger("PutDownDocument");
-        documentUI.gameObject.SetActive(false);
-        canPickUp = true;
-    }
-
     IEnumerator OpenUI()
     {
         yield return new WaitForSeconds(1);

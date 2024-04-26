@@ -5,49 +5,24 @@ using UnityEngine.UIElements;
 
 public class Document : MonoBehaviour
 {
-    public float speed;
-    public float rotateSpeed;
-    public Transform target;
-    //Vector3 startPosition;
-    public Transform tableTarget;
-    public bool start = false;
-
-    private bool targetReached = false;
+    public Animator documentAnimator;
+    public GameObject documentUI;
+    public GameObject[] camButtons;
 
     private void Start()
     {
-        //startPosition = transform.position;
+        GameObject parentObject = transform.parent.gameObject;
+
+         documentUI = parentObject;
     }
-    void Update()
+    public void CloseDocument()
     {
-
-
-        if (targetReached == false && start == true)
+        documentAnimator.SetTrigger("PutDownDocument");
+        documentUI.gameObject.SetActive(false);
+        foreach (GameObject button in camButtons)
         {
-            // Move our position a step closer to the target.
-            var step = speed * Time.deltaTime; // calculate distance to move
-            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-            transform.Rotate(rotateSpeed, 0.0f, 0.0f);
-            if (Vector3.Distance(transform.position, target.position) < 0.00000000000000000001f)
-            {
-                Debug.Log("Target Reached");
-                targetReached = true;
-                start = false;
-            }
+            button.SetActive(true);
         }
-        if (targetReached == true && start == true)
-        {
-            // Move our position a step closer to the target.
-            var step = speed * Time.deltaTime; // calculate distance to move
-            transform.position = Vector3.MoveTowards(transform.position, tableTarget.position, step);
-            transform.Rotate(-rotateSpeed, 0.0f, 0.0f);
-            if (Vector3.Distance(transform.position, tableTarget.position) < 0.0000000000000000000000000001f)
-            {
-                Debug.Log("Target Reached");
-                targetReached = false;
-                start = false;
-            }
-        }
-
+        Debug.Log("Close Document");
     }
 }
