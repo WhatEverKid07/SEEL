@@ -11,6 +11,7 @@ public class Dialogue : MonoBehaviour
     void Start()
     {
         PlayDialouge();
+        //dialogue = GetComponent<AudioSource>();
     }
     private void PlayDialouge()
     {

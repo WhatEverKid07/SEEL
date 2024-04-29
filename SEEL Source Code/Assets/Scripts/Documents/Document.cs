@@ -17,12 +17,12 @@ public class Document : MonoBehaviour
     }
     public void CloseDocument()
     {
-        documentAnimator.SetTrigger("PutDownDocument");
+        //documentAnimator.SetTrigger("PutDownDocument");
         documentUI.gameObject.SetActive(false);
         foreach (GameObject button in camButtons)
         {
             button.SetActive(true);
         }
-        Debug.Log("Close Document");
+        //Debug.Log("Close Document");
     }
 }

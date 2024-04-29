@@ -26,12 +26,13 @@ public class DocumentButton : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        documentAnimator.SetTrigger("PickUpDocument");
+        //documentAnimator.SetTrigger("PickUpDocument");
         foreach (GameObject button in camButtons)
         {
             button.SetActive(false);
         }
-        StartCoroutine(OpenUI());
+        documentUI.gameObject.SetActive(true);
+        //StartCoroutine(OpenUI());
     }
     IEnumerator OpenUI()
     {

@@ -23,16 +23,16 @@ public class VictimData : MonoBehaviour
     public int death;
 
     [Header("Freedom Dialogue")]
-    public List<AudioClip> freedomDialogue;
-    public Transform freedomSubtitles;
+    public List<GameObject> freedomDialogue;
+    //public Transform freedomSubtitles;
 
     [Header("Prison Dialogue")]
-    public List<AudioClip> prisonDialogue;
-    public Transform prisonSubtitles;
+    public List<GameObject> prisonDialogue;
+    //public Transform prisonSubtitles;
 
     [Header("Death Dialogue")]
-    public List<AudioClip> deathDialogue;
-    public Transform deathSubtitles;
+    public List<GameObject> deathDialogue;
+    //public Transform deathSubtitles;
 
     private void Start()
     {

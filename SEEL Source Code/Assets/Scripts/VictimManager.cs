@@ -20,10 +20,15 @@ public class VictimManager : MonoBehaviour
     public Transform prisonOutline;
     public Transform deathOutline;
 
+    [Header("---Other Stuff---")]
     public static int fateNumber;
     public GameObject[] peopleModels; // Array to hold your different people models
     public float rightDoorPauseDuration;
     public float afterChoicePause;
+    private float clipLength;
+    private GameObject chosenFreedomDialouge;
+    private GameObject chosenPrisonDialouge;
+    private GameObject chosenDeathDialouge;
 
     [Header("Info")]
     public GameObject currentPerson; // Reference to the currently active person
@@ -121,54 +126,52 @@ public class VictimManager : MonoBehaviour
 
     public void FreedomChoice()
     {
-        /*
-        AudioClip freedomRandomClip = victimData.freedomDialogue[Random.Range(0, victimData.freedomDialogue.Count)];
-        victimData.victimAudioSource.clip = freedomRandomClip;
-        victimData.victimAudioSource.Play();
-        */
-        victimData.freedomSubtitles.gameObject.SetActive(true);
-        victimData.subtitleBackground.gameObject.SetActive(true);
+        AudioClip freedomRandomClip;
+        int randomIndex = Random.Range(0, victimData.freedomDialogue.Count);
+        chosenFreedomDialouge = victimData.freedomDialogue[randomIndex];
+        freedomRandomClip = chosenFreedomDialouge.GetComponent<AudioSource>().clip;
+        chosenFreedomDialouge.SetActive(true);
+        clipLength = freedomRandomClip.length;
+
         EveryChoice();
         Debug.Log("Freedom");
         fateNumber += victimData.freedom;
+
         StartCoroutine(VoiceLines());
-        //        StartCoroutine(VoiceLines(freedomRandomClip.length));
     }
     public void PrisonChoice()
     {
-        /*
-        AudioClip prisonRandomClip = victimData.prisonDialogue[Random.Range(0, victimData.prisonDialogue.Count)];
-        victimData.victimAudioSource.clip = prisonRandomClip;
-        victimData.victimAudioSource.Play();
-        */
-        victimData.prisonSubtitles.gameObject.SetActive(true);
-        victimData.subtitleBackground.gameObject.SetActive(true);
+        AudioClip prisonRandomClip;
+        int randomIndex = Random.Range(0, victimData.prisonDialogue.Count);
+        chosenPrisonDialouge = victimData.prisonDialogue[randomIndex];
+        prisonRandomClip = chosenPrisonDialouge.GetComponent<AudioSource>().clip;
+        chosenPrisonDialouge.SetActive(true);
+        clipLength = prisonRandomClip.length;
+
         EveryChoice();
         Debug.Log("Prison");
         fateNumber += victimData.prison;
+
         StartCoroutine(VoiceLines());
-        //        StartCoroutine(VoiceLines(prisonRandomClip.length));
     }
     public void DeathChoice()
     {
-        /*
-        AudioClip deathRandomClip = victimData.deathDialogue[Random.Range(0, victimData.deathDialogue.Count)];
-        victimData.victimAudioSource.clip = deathRandomClip;
-        victimData.victimAudioSource.Play();
-        */
-        victimData.deathSubtitles.gameObject.SetActive(true);
-        victimData.subtitleBackground.gameObject.SetActive(true);
+        AudioClip deathRandomClip;
+        int randomIndex = Random.Range(0, victimData.deathDialogue.Count);
+        chosenDeathDialouge = victimData.deathDialogue[randomIndex];
+        deathRandomClip = chosenDeathDialouge.GetComponent<AudioSource>().clip;
+        chosenDeathDialouge.SetActive(true);
+        clipLength = deathRandomClip.length;
+
         EveryChoice();
         Debug.Log("Death");
         fateNumber += victimData.death;
 
         StartCoroutine(VoiceLines());
-        //StartCoroutine(VoiceLines(deathRandomClip.length));
     }
     public void EveryChoice()
     {
         victimAnimatorController.SetTrigger("Stand");
-        //StartCoroutine(AfterChoice());
         Debug.Log(fateNumber);
         freedomOutline.gameObject.SetActive(false);
         prisonOutline.gameObject.SetActive(false);
@@ -176,16 +179,26 @@ public class VictimManager : MonoBehaviour
     }
     IEnumerator VoiceLines()
     {
-        //    IEnumerator VoiceLines(float clipLength)
-        //        yield return new WaitForSeconds(clipLength);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(clipLength);
 
         doorAnimationControl.leftDoorAnimation.SetTrigger("LeftOpen");
         doorAnimationControl.doorOpening.PlayDelayed(0.39f);
-        victimData.freedomSubtitles.gameObject.SetActive(false);
-        victimData.prisonSubtitles.gameObject.SetActive(false);
-        victimData.deathSubtitles.gameObject.SetActive(false);
-        victimData.subtitleBackground.gameObject.SetActive(false);
+
+        if (chosenFreedomDialouge == true)
+        {
+            chosenFreedomDialouge.SetActive(false);
+            Debug.Log("IM GONE");
+        }
+        if (chosenPrisonDialouge == true)
+        {
+            chosenPrisonDialouge.SetActive(false);
+            Debug.Log("IM GONE");
+        }
+        if (chosenDeathDialouge == true)
+        {
+            chosenDeathDialouge.SetActive(false);
+            Debug.Log("IM GONE");
+        }
 
         StartCoroutine(AfterChoice());
     }
