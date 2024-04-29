@@ -35,17 +35,19 @@ public class CamScript : MonoBehaviour
     public float rightRotationDown;
     public float bottomRotation;
 
-    private bool centre;
-    private bool leftSide;
-    private bool rightSide;
-    private bool bottomSide;
+    public bool centre = true;
+    public bool leftSide = false;
+    public bool rightSide = false;
+    public bool bottomSide = false;
 
     void Start()
     {
+        /*
         centre = true;
         leftSide = false;
         rightSide = false;
         bottomSide = false;
+        */
     }
     void Update()
     {
