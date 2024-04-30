@@ -5,21 +5,25 @@ using UnityEngine.Animations;
 
 public class NextVictim : MonoBehaviour
 {
-    private Renderer button4Renderer;
     public VictimManager manager;
     public Animator animator;
+    public Color outlineRed;
 
     public Renderer buttonHighlightRenderer;
 
     void Start()
     {
-        button4Renderer = GetComponent<Renderer>();
+        buttonHighlightRenderer = GetComponent<Renderer>();
     }
-
+    private void OnMouseEnter()
+    {
+        buttonHighlightRenderer.material.color = outlineRed;
+    }
     private void OnMouseUpAsButton()
     {
         animator.SetTrigger("NewVictim");
-        manager.GetNextPerson();
+        manager.RustyButtonActivate();
+        gameObject.SetActive(false);
     }
     private void OnMouseExit()
     {

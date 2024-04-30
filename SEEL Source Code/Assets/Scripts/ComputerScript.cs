@@ -30,6 +30,7 @@ public class ComputerScript: MonoBehaviour
     {
         computerScreen.gameObject.SetActive(true);
         leavePCButton.gameObject.SetActive(true);
+        buttonHighlightRenderer.material.color = Color.clear;
         foreach (Transform t in camButtons)
         {
             gameObject.SetActive(false);

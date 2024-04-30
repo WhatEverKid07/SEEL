@@ -26,9 +26,12 @@ public class VictimManager : MonoBehaviour
     public float rightDoorPauseDuration;
     public float afterChoicePause;
     private float clipLength;
+
     private GameObject chosenFreedomDialouge;
     private GameObject chosenPrisonDialouge;
     private GameObject chosenDeathDialouge;
+
+    public Transform rustyButtonOutlineForNextPerson;
 
     [Header("Info")]
     public GameObject currentPerson; // Reference to the currently active person
@@ -96,6 +99,7 @@ public class VictimManager : MonoBehaviour
         currentPerson.SetActive(true);
         
         nextVictimButtonOutline.gameObject.SetActive(false);
+        rustyButtonOutlineForNextPerson.gameObject.SetActive(false);
     }
 
     private void Beginning()
@@ -209,6 +213,7 @@ public class VictimManager : MonoBehaviour
         secondWaypoint.StartMovement();
         yield return new WaitForSeconds(3.3f);
         documentDrawerAnimationController.PutAwayDocument();
+        rustyButtonOutlineForNextPerson.gameObject.SetActive(true);
     }
     public void JustBeforeNextPerson()
     {
@@ -218,21 +223,20 @@ public class VictimManager : MonoBehaviour
 
         currentPerson.SetActive(false);
         Debug.Log("Away Document HAHAHAHA");
-        StartCoroutine(GetNextPerson());
-        //nextVictimButtonOutline.gameObject.SetActive(true);
-    }
 
+        //this is if we dont want the rusty button to get a new person
+        //StartCoroutine(GetNextPerson());
+    }
+    public void RustyButtonActivate()
+    {
+        StartCoroutine(GetNextPerson());
+    }
 
     public IEnumerator GetNextPerson()
     {
-
         yield return new WaitForSeconds(2f);
-
-
         GameObject randomPerson = SelectRandomPerson();
         currentPerson = randomPerson;
         currentPerson.SetActive(true);
-        
-
     }
 }

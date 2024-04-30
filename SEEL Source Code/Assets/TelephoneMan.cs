@@ -5,8 +5,9 @@ using UnityEngine;
 public class TelephoneMan : MonoBehaviour
 {
     public CamScript cameraScript;
-
+    public VictimManager victimManager;
     public AudioSource dialouge;
+    public bool start = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,4 +17,12 @@ public class TelephoneMan : MonoBehaviour
         cameraScript.LeftTurn();
     }
 
+    private void Update()
+    {
+        if (start)
+        {
+            victimManager.enabled = true;
+        }
+        else { victimManager.enabled = false;}
+    }
 }
