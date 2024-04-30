@@ -89,7 +89,8 @@ public class VictimManager : MonoBehaviour
     {
         Debug.Log("All people have been selected once");
         // DAY 2
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Demo End");
     }
 
     private void Start()
@@ -225,7 +226,7 @@ public class VictimManager : MonoBehaviour
         Debug.Log("Away Document HAHAHAHA");
 
         //this is if we dont want the rusty button to get a new person
-        //StartCoroutine(GetNextPerson());
+        StartCoroutine(GetNextPerson());
     }
     public void RustyButtonActivate()
     {
