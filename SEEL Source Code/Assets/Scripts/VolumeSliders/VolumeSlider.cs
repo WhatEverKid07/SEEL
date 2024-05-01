@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class VolumeSlider : MonoBehaviour
@@ -17,6 +18,7 @@ public class VolumeSlider : MonoBehaviour
     public  float musicSliderVolume;
     public  float SFX_SliderVolume;
 
+    public AudioMixer musicMixer;
     public AudioSource[] allAudioSources; // Array to hold all audio sources
     public AudioSource[] music; // Array to hold all audio sources
     public AudioSource[] SFX; // Array to hold all audio sources
@@ -33,6 +35,10 @@ public class VolumeSlider : MonoBehaviour
         }
         else
         {
+            musicMixer.SetFloat("Master",allSound.value);
+            musicMixer.SetFloat("SFX",SFX_Slider.value);
+            musicMixer.SetFloat("Music",musicSlider.value);
+
             allSound.value = allAudioSliderVolumeStatic;
             musicSlider.value = musicSliderVolumeStatic;
             SFX_Slider.value = SFX_SliderVolumeStatic;
@@ -97,6 +103,10 @@ public class VolumeSlider : MonoBehaviour
     }
     private void Update()
     {
+        musicMixer.SetFloat("Master", allSound.value);
+        musicMixer.SetFloat("SFX", SFX_Slider.value);
+        musicMixer.SetFloat("Music", musicSlider.value);
+
         allAudioSliderVolumeStatic = allSound.value;
         musicSliderVolumeStatic = musicSlider.value;
         SFX_SliderVolumeStatic = SFX_Slider.value;
@@ -120,5 +130,6 @@ public class VolumeSlider : MonoBehaviour
             source.volume = SFX_SliderVolume;
             //Debug.Log("SFX Volume" + SFX_SliderVolume);
         }
+        
     }
 }
