@@ -8,8 +8,8 @@ public class NextVictim : MonoBehaviour
     public VictimManager manager;
     public Animator animator;
     public Color outlineRed;
-
     public Renderer buttonHighlightRenderer;
+    public AudioSource buttonClick;
 
     void Start()
     {
@@ -21,6 +21,7 @@ public class NextVictim : MonoBehaviour
     }
     private void OnMouseUpAsButton()
     {
+        buttonClick.Play();
         animator.SetTrigger("NewVictim");
         manager.RustyButtonActivate();
         gameObject.SetActive(false);

@@ -97,8 +97,6 @@ public class VolumeSlider : MonoBehaviour
     }
     private void Update()
     {
-
-
         allAudioSliderVolumeStatic = allSound.value;
         musicSliderVolumeStatic = musicSlider.value;
         SFX_SliderVolumeStatic = SFX_Slider.value;
@@ -110,17 +108,17 @@ public class VolumeSlider : MonoBehaviour
         foreach (AudioSource source in allAudioSources)
         {
             source.volume = allAudioSliderVolume;
-            Debug.Log("Global Audio" + allAudioSliderVolume);
+            //Debug.Log("Global Audio" + allAudioSliderVolume);
         }
         foreach (AudioSource source in music)
         {
             source.volume = musicSliderVolume;
-            Debug.Log("music Volume" + musicSliderVolume);
+            //Debug.Log("music Volume" + musicSliderVolume);
         }
         foreach (AudioSource source in SFX)
         {
             source.volume = SFX_SliderVolume;
-            Debug.Log("SFX Volume" + SFX_SliderVolume);
+            //Debug.Log("SFX Volume" + SFX_SliderVolume);
         }
     }
 }

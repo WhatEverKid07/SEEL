@@ -12,9 +12,6 @@ public class DoorAnimationControl : MonoBehaviour
     public GameObject rightDoor;
     public GameObject leftDoor;
 
-    public GameObject rightDoorOpenActivator;
-    public GameObject leftDoorCloseActivator;
-
     public AudioSource doorOpening;
     public AudioSource doorClosing;
 
@@ -24,12 +21,24 @@ public class DoorAnimationControl : MonoBehaviour
         leftDoorAnimation = leftDoor.GetComponent<Animator>();
         //rightDoorAnimation.SetTrigger("RightOpen");
     }
-    /*
+    public void OpenRightDoor()
+    {
+        rightDoorAnimation.SetTrigger("RightOpen");
+        doorOpening.PlayDelayed(0.75f);
+    }
+    public void OpenLeftDoor()
+    {
+        leftDoorAnimation.SetTrigger("LeftOpen");
+        doorOpening.PlayDelayed(0.39f);
+    }
+    public void CloseRightDoor()
+    {
+        rightDoorAnimation.SetTrigger("RightClose");
+        doorClosing.PlayDelayed(1.77f);
+    }
     public void CloseLeftDoor()
     {
         leftDoorAnimation.SetTrigger("LeftClose");
         doorClosing.PlayDelayed(1.2f);
-        Debug.Log("HAHASHDADHAS");
     }
-    */
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject background;
     public static bool gameIsPaused = false;
     public List<GameObject> camButtons;
 
@@ -27,6 +28,7 @@ public class PauseMenu : MonoBehaviour
     {
         AudioListener.pause = false;
         pauseMenu.SetActive(false);
+        background.SetActive(false);
         Time.timeScale = 1;
         gameIsPaused = false;
         foreach (GameObject CamButtons in camButtons)
@@ -40,6 +42,7 @@ public class PauseMenu : MonoBehaviour
         AudioListener.pause = true;
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
+        background.SetActive(true);
         gameIsPaused = true;
         foreach (GameObject CamButtons in camButtons)
         {

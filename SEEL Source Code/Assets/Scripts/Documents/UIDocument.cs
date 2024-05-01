@@ -11,7 +11,7 @@ public class UIDocument : MonoBehaviour
     public List<Transform> documents;
     public Color outlineRed;
 
-    private bool canPickUpDocument = true;
+    //private bool canPickUpDocument = true;
 
     void Start()
     {

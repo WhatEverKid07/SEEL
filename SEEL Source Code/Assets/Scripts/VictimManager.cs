@@ -88,9 +88,9 @@ public class VictimManager : MonoBehaviour
     private void AllPeopleSelected()
     {
         Debug.Log("All people have been selected once");
-        // DAY 2
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene("Demo End");
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene("Demo End");
     }
 
     private void Start()
@@ -114,16 +114,14 @@ public class VictimManager : MonoBehaviour
     IEnumerator OpenDoorWithPause()
     {
         yield return new WaitForSeconds(rightDoorPauseDuration);
-        doorAnimationControl.rightDoorAnimation.SetTrigger("RightOpen");
-        doorAnimationControl.doorOpening.PlayDelayed(0.75f);
+        doorAnimationControl.OpenRightDoor();
     }
     public void AtChair()
     {
         victimAnimatorController.SetTrigger("Sit");
         Debug.Log("At Chair");
         firstWaypoint.isOn = false;
-        doorAnimationControl.rightDoorAnimation.SetTrigger("RightClose");
-        doorAnimationControl.doorClosing.PlayDelayed(1.77f);
+        doorAnimationControl.CloseRightDoor();
         freedomOutline.gameObject.SetActive(true);
         prisonOutline.gameObject.SetActive(true);
         deathOutline.gameObject.SetActive(true);
@@ -186,8 +184,7 @@ public class VictimManager : MonoBehaviour
     {
         yield return new WaitForSeconds(clipLength);
 
-        doorAnimationControl.leftDoorAnimation.SetTrigger("LeftOpen");
-        doorAnimationControl.doorOpening.PlayDelayed(0.39f);
+        doorAnimationControl.OpenLeftDoor();
 
         if (chosenFreedomDialouge == true)
         {
@@ -218,15 +215,14 @@ public class VictimManager : MonoBehaviour
     }
     public void JustBeforeNextPerson()
     {
-        doorAnimationControl.leftDoorAnimation.SetTrigger("LeftClose");
-        doorAnimationControl.doorClosing.PlayDelayed(1.2f);
+        doorAnimationControl.CloseLeftDoor();
         firstWaypoint.isOn = true;
 
         currentPerson.SetActive(false);
         Debug.Log("Away Document HAHAHAHA");
 
         //this is if we dont want the rusty button to get a new person
-        StartCoroutine(GetNextPerson());
+        //StartCoroutine(GetNextPerson());
     }
     public void RustyButtonActivate()
     {
