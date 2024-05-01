@@ -9,19 +9,22 @@ public class VolumeSlider : MonoBehaviour
     public Slider allSound;
     public Slider musicSlider;
     public Slider SFX_Slider;
+    public Slider dialogueSlider;
 
     public static float allAudioSliderVolumeStatic;
     public static float musicSliderVolumeStatic;
     public static float SFX_SliderVolumeStatic;
+    public static float dialogueVolumeStatic;
 
     public  float allAudioSliderVolume;
     public  float musicSliderVolume;
     public  float SFX_SliderVolume;
+    public  float dialogueVolume;
 
     public AudioMixer musicMixer;
-    public AudioSource[] allAudioSources; // Array to hold all audio sources
-    public AudioSource[] music; // Array to hold all audio sources
-    public AudioSource[] SFX; // Array to hold all audio sources
+    //public AudioSource[] allAudioSources; // Array to hold all audio sources
+    //public AudioSource[] music; // Array to hold all audio sources
+    //public AudioSource[] SFX; // Array to hold all audio sources
 
     public bool isGameScene;
 
@@ -32,16 +35,19 @@ public class VolumeSlider : MonoBehaviour
             allSound.value = 1;
             musicSlider.value = 1;
             SFX_Slider.value = 1;
+            dialogueSlider.value = 1;
         }
         else
         {
             musicMixer.SetFloat("Master",allSound.value);
             musicMixer.SetFloat("SFX",SFX_Slider.value);
             musicMixer.SetFloat("Music",musicSlider.value);
+            musicMixer.SetFloat("Dialogue",dialogueSlider.value);
 
             allSound.value = allAudioSliderVolumeStatic;
             musicSlider.value = musicSliderVolumeStatic;
             SFX_Slider.value = SFX_SliderVolumeStatic;
+            dialogueSlider.value = dialogueVolumeStatic;
         }
 
 
@@ -58,63 +64,26 @@ public class VolumeSlider : MonoBehaviour
         Debug.Log(SFX_SliderVolume);
         */
     }
-    private void Awake()
-    {
-        /*
-        allAudioSliderVolume = allAudioSliderVolumeStatic;
-        musicSliderVolume = musicSliderVolumeStatic;
-        SFX_SliderVolume = SFX_SliderVolumeStatic;
-        Debug.Log("AWAKE");
-        */
-        //StartCoroutine(SliderValueSet());
-    }
 
-    IEnumerator SliderValueSet()
-    {
-        yield return new WaitForSeconds(1);
-        if (allSound.value != allAudioSliderVolume)
-        {
-            allSound.value = allAudioSliderVolume;
-        }
-        if (musicSlider.value != musicSliderVolume)
-        {
-            musicSlider.value = musicSliderVolume;
-        }
-        if (SFX_Slider.value != SFX_SliderVolume)
-        {
-            SFX_Slider.value = SFX_SliderVolume;
-        }
-        //SliderUpdate();
-    }
-    public void SliderUpdate()
-    {
-        allSound.value = allAudioSliderVolume;
-        musicSlider.value = musicSliderVolume;
-        SFX_Slider.value = SFX_SliderVolume;
-    }
-    public void VolumeUpdate()
-    {
-        allAudioSliderVolume = allSound.value;
-        musicSliderVolume = musicSlider.value;
-        SFX_SliderVolume = SFX_Slider.value;
-        Debug.Log(allAudioSliderVolume);
-        Debug.Log(musicSliderVolume);
-        Debug.Log(SFX_SliderVolume);
-    }
+
     private void Update()
     {
         musicMixer.SetFloat("Master", allSound.value);
         musicMixer.SetFloat("SFX", SFX_Slider.value);
         musicMixer.SetFloat("Music", musicSlider.value);
+        musicMixer.SetFloat("Dialogue", dialogueSlider.value);
 
         allAudioSliderVolumeStatic = allSound.value;
         musicSliderVolumeStatic = musicSlider.value;
         SFX_SliderVolumeStatic = SFX_Slider.value;
+        dialogueVolumeStatic = dialogueSlider.value;
 
         allAudioSliderVolume = allAudioSliderVolumeStatic;
         musicSliderVolume = musicSliderVolumeStatic;
         SFX_SliderVolume = SFX_SliderVolumeStatic;
+        dialogueVolume = dialogueVolumeStatic;
 
+        /*
         foreach (AudioSource source in allAudioSources)
         {
             source.volume = allAudioSliderVolume;
@@ -130,6 +99,6 @@ public class VolumeSlider : MonoBehaviour
             source.volume = SFX_SliderVolume;
             //Debug.Log("SFX Volume" + SFX_SliderVolume);
         }
-        
+        */
     }
 }

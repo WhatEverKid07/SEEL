@@ -25,6 +25,7 @@ public class NextVictim : MonoBehaviour
         animator.SetTrigger("NewVictim");
         manager.RustyButtonActivate();
         gameObject.SetActive(false);
+        buttonHighlightRenderer.material.color = Color.clear;
     }
     private void OnMouseExit()
     {
