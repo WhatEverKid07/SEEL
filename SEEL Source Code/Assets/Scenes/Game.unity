@@ -1693,6 +1693,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &115331137
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115331134}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9fdecd537912f6646864a00222572064, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &122701915
 GameObject:
   m_ObjectHideFlags: 0
@@ -3872,7 +3893,7 @@ MonoBehaviour:
   SFX_SliderVolume: 1
   dialogueVolume: 1
   musicMixer: {fileID: 24100000, guid: 667a00b3b830208408ba96d9ecb3a51a, type: 2}
-  isGameScene: 0
+  isGameScene: 1
 --- !u!1 &203730375
 GameObject:
   m_ObjectHideFlags: 0
@@ -29635,6 +29656,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 170265faa43daa3449c06f75cf27eeb3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 115331136}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 170265faa43daa3449c06f75cf27eeb3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 115331137}
     - targetCorrespondingSourceObject: {fileID: 195558336485830507, guid: 170265faa43daa3449c06f75cf27eeb3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1345699170}
@@ -32550,7 +32574,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025214063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.047, z: 0.132}
+  m_LocalPosition: {x: 0, y: -0.023, z: 0.046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -27,20 +27,24 @@ public class DoorAnimationControl : MonoBehaviour
         rightDoorAnimation.SetTrigger("RightOpen");
         peopleChatter.PlayDelayed(0.2f);
         doorOpening.PlayDelayed(0.75f);
+        Debug.Log("OpenRightDoor");
     }
     public void OpenLeftDoor()
     {
         leftDoorAnimation.SetTrigger("LeftOpen");
         doorOpening.PlayDelayed(0.29f);
+        Debug.Log("OpenLeftDoor");
     }
     public void CloseRightDoor()
     {
         rightDoorAnimation.SetTrigger("RightClose");
         doorClosing.PlayDelayed(1.77f);
+        Debug.Log("CloseRightDoor");
     }
     public void CloseLeftDoor()
     {
         leftDoorAnimation.SetTrigger("LeftClose");
         doorClosing.PlayDelayed(1f);
+        Debug.Log("CloseLeftDoor");
     }
 }
