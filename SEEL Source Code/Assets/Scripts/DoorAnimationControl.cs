@@ -14,6 +14,7 @@ public class DoorAnimationControl : MonoBehaviour
 
     public AudioSource doorOpening;
     public AudioSource doorClosing;
+    public AudioSource peopleChatter;
 
     private void Start()
     {
@@ -24,12 +25,13 @@ public class DoorAnimationControl : MonoBehaviour
     public void OpenRightDoor()
     {
         rightDoorAnimation.SetTrigger("RightOpen");
+        peopleChatter.PlayDelayed(0.2f);
         doorOpening.PlayDelayed(0.75f);
     }
     public void OpenLeftDoor()
     {
         leftDoorAnimation.SetTrigger("LeftOpen");
-        doorOpening.PlayDelayed(0.39f);
+        doorOpening.PlayDelayed(0.29f);
     }
     public void CloseRightDoor()
     {
@@ -39,6 +41,6 @@ public class DoorAnimationControl : MonoBehaviour
     public void CloseLeftDoor()
     {
         leftDoorAnimation.SetTrigger("LeftClose");
-        doorClosing.PlayDelayed(1.2f);
+        doorClosing.PlayDelayed(1f);
     }
 }

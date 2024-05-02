@@ -125,8 +125,13 @@ public class VictimManager : MonoBehaviour
         freedomOutline.gameObject.SetActive(true);
         prisonOutline.gameObject.SetActive(true);
         deathOutline.gameObject.SetActive(true);
+        StartCoroutine(StopPeopleChatter());
     }
-
+    IEnumerator StopPeopleChatter()
+    {
+        yield return new WaitForSeconds(1.8f);
+        doorAnimationControl.peopleChatter.Stop();
+    }
     public void FreedomChoice()
     {
         AudioClip freedomRandomClip;
