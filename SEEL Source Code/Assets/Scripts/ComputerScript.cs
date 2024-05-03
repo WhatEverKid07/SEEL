@@ -10,6 +10,7 @@ public class ComputerScript: MonoBehaviour
     public Transform computerScreen;
     public List<Transform> camButtons;
     public Transform leavePCButton;
+    public AudioSource openSFX;
     
     void Start()
     {
@@ -35,6 +36,7 @@ public class ComputerScript: MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        openSFX.Play();
     }
 
     public void LeavePCScreen()

@@ -27,6 +27,7 @@ public class DocumentButton : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        gameObject.SetActive(false);
         documentShuffle.Play();
         //documentAnimator.SetTrigger("PickUpDocument");
         foreach (GameObject button in camButtons)
@@ -34,6 +35,7 @@ public class DocumentButton : MonoBehaviour
             button.SetActive(false);
         }
         documentUI.gameObject.SetActive(true);
+        documentButton.material.color = Color.clear;
         //StartCoroutine(OpenUI());
     }
     IEnumerator OpenUI()

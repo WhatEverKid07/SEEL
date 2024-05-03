@@ -14,6 +14,7 @@ public class VictimManager : MonoBehaviour
     public DocumentButton documentButton;
     public DoorAnimationControl doorAnimationControl;
     public Document_DrawerAnimationController documentDrawerAnimationController;
+    public FadeForNextDay fadeForNextDay;
 
     [Header("---Stamp Outline---")]
     public Transform freedomOutline;
@@ -26,6 +27,7 @@ public class VictimManager : MonoBehaviour
     public float rightDoorPauseDuration;
     public float afterChoicePause;
     private float clipLength;
+    public GameObject nextDay;
 
     private GameObject chosenFreedomDialouge;
     private GameObject chosenPrisonDialouge;
@@ -88,9 +90,17 @@ public class VictimManager : MonoBehaviour
     private void AllPeopleSelected()
     {
         Debug.Log("All people have been selected once");
-        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        fadeForNextDay.BlackOut();
+        StartCoroutine(NextDay());
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //SceneManager.LoadScene("Demo End");
+    }
+    IEnumerator NextDay()
+    {
+        yield return new WaitForSeconds(0.2f);
+        nextDay.SetActive(true);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void Start()
