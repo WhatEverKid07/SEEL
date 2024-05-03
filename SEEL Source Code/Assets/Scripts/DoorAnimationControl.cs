@@ -25,7 +25,7 @@ public class DoorAnimationControl : MonoBehaviour
     public void OpenRightDoor()
     {
         rightDoorAnimation.SetTrigger("RightOpen");
-        peopleChatter.PlayDelayed(0.2f);
+        peopleChatter.PlayDelayed(0.8f);
         doorOpening.PlayDelayed(0.75f);
         Debug.Log("OpenRightDoor");
     }

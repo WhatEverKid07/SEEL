@@ -129,7 +129,7 @@ public class VictimManager : MonoBehaviour
     }
     IEnumerator StopPeopleChatter()
     {
-        yield return new WaitForSeconds(1.8f);
+        yield return new WaitForSeconds(1.9f);
         doorAnimationControl.peopleChatter.Stop();
     }
     public void FreedomChoice()

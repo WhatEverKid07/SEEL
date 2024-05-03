@@ -7,6 +7,7 @@ public class DocumentButton : MonoBehaviour
     private Renderer documentButton;
     public Animator documentAnimator;
     public Transform documentUI;
+    public AudioSource documentShuffle;
 
     public GameObject[] camButtons;
     public Color outlineRed;
@@ -26,6 +27,7 @@ public class DocumentButton : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        documentShuffle.Play();
         //documentAnimator.SetTrigger("PickUpDocument");
         foreach (GameObject button in camButtons)
         {
