@@ -97,7 +97,7 @@ public class VictimManager : MonoBehaviour
     }
     IEnumerator NextDay()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.4f);
         nextDay.SetActive(true);
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

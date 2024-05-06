@@ -16,7 +16,7 @@ public class ComputerScript: MonoBehaviour
     {
         buttonHighlightRenderer = GetComponent<Renderer>();
     }
-
+    
     private void OnMouseEnter()
     {
         buttonHighlightRenderer.material.color = outlineRed;
@@ -26,6 +26,7 @@ public class ComputerScript: MonoBehaviour
     {
         buttonHighlightRenderer.material.color = Color.clear;
     }
+   
 
     private void OnMouseDown()
     {
