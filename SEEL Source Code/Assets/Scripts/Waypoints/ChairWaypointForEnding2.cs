@@ -9,11 +9,11 @@ public class FirstWaypointForEnding2 : MonoBehaviour
 {
     public FirstWaypoint firstWaypoint;
     public AudioSource footsteps;
-    public FadeForNextDay fadeForNextDay;
     public GameObject nextDay;
+    public GameObject image;
     public GameObject light;
     private bool canFade;
-    public Animator animator;
+    public GameObject pressSpaceText;
 
     private void Start()
     {
@@ -35,9 +35,11 @@ public class FirstWaypointForEnding2 : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         nextDay.SetActive(true);
-        //fadeForNextDay.FadeIn();
-        animator.SetTrigger("EndFade");
         light.SetActive(false);
+        yield return new WaitForSeconds(1);
+        image.SetActive(true);
         canFade = false;
+        yield return new WaitForSeconds(5);
+        pressSpaceText.SetActive(true);
     }
 }
