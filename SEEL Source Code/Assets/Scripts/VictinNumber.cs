@@ -16,7 +16,7 @@ public class VictimData : MonoBehaviour
     public GameObject freedomStampPrintUI;
     public GameObject deathStampPrintUI;
 
-    public Transform subtitleBackground;
+    //public Transform subtitleBackground;
     [Header("Numbers")]
     public int freedom;
     public int prison;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dialogue : MonoBehaviour
 {
     public GameObject subtitle;
-    public GameObject background;
+    //public GameObject background;
     public AudioSource dialogue;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +17,6 @@ public class Dialogue : MonoBehaviour
     {
         dialogue.Play();
         subtitle.SetActive(true);
-        background.SetActive(true);
+        //background.SetActive(true);
     }
 }
