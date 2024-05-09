@@ -39,6 +39,7 @@ public class CamScript : MonoBehaviour
     public bool leftSide = false;
     public bool rightSide = false;
     public bool bottomSide = false;
+    public bool nothing = false;
 
     void Start()
     {
@@ -66,6 +67,13 @@ public class CamScript : MonoBehaviour
         if (bottomSide == true)
         {
             BottomSide();
+        }
+        if (nothing)
+        {
+            leftTurnButton.gameObject.SetActive(false);
+            leftTurnButton2.gameObject.SetActive(false);
+            rightTurnButton.gameObject.SetActive(false);
+            rightTurnButton2.gameObject.SetActive(false);
         }
     }
 

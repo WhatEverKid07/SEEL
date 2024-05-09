@@ -17,20 +17,15 @@ public class EndingDecider : MonoBehaviour
         yield return new WaitForSeconds(2);
         if(VictimManager.fateNumber >= 7)
         {
-            SceneManager.LoadScene("Ending 1");
+            SceneManager.LoadScene("Ending 3");
         }
         else if (VictimManager.fateNumber >= 0 && VictimManager.fateNumber < 7)
         {
-            SceneManager.LoadScene("Ending 2");
+            SceneManager.LoadScene("Ending 1");
         }
         else if (VictimManager.fateNumber < 0)
         {
-            SceneManager.LoadScene("Ending 3");
+            SceneManager.LoadScene("Ending 2");
         }
-    }
-    IEnumerator BackToStart()
-    {
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("Start Menu");
     }
 }
