@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject background;
     public static bool gameIsPaused = false;
     public List<GameObject> camButtons;
+    public bool curserLock;
+    public List<GameObject> chosenCamButtons;
 
     void Update()
     {
@@ -26,15 +28,20 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        if(curserLock)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         AudioListener.pause = false;
         pauseMenu.SetActive(false);
         background.SetActive(false);
         Time.timeScale = 1;
         gameIsPaused = false;
-        foreach (GameObject CamButtons in camButtons)
+        foreach (GameObject ChosenCamButtons in chosenCamButtons.ToArray())
         {
-            CamButtons.SetActive(true);
+            ChosenCamButtons.SetActive(true);
+            camButtons.Add(ChosenCamButtons);
+            chosenCamButtons.Remove(ChosenCamButtons);
         }
     }
        
@@ -46,9 +53,15 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         background.SetActive(true);
         gameIsPaused = true;
-        foreach (GameObject CamButtons in camButtons)
+        foreach (GameObject CamButtons in camButtons.ToArray())
         {
-            CamButtons.SetActive(false);
+            if (CamButtons.activeInHierarchy)
+            {
+                CamButtons.gameObject.SetActive(false);
+                chosenCamButtons.Add(CamButtons);
+                camButtons.Remove(CamButtons);
+
+            }
         }
     }
 }
