@@ -1,5 +1,11 @@
 Shader "Custom/BrightenShader"
 {
+    Properties
+    {
+        _MainTex("Texture", 2D) = "White" {}
+        _Brightness("Brightness", Range(0.0, 2.0)) = 1.0
+    }
+
     SubShader
     {
         Pass

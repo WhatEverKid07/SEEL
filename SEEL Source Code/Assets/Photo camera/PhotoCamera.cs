@@ -13,15 +13,19 @@ public class PhotoCamera : MonoBehaviour
     private void Start()
     {
         renderTexture = new RenderTexture(Screen.width, Screen.height, 24);
-        photoCamera.targetTexture = renderTexture; // Set the render texture as the target texture for the separate camera
+        photoCamera.targetTexture = renderTexture;
     }
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            StartCoroutine(CapturePhoto());
+            //StartCoroutine(CapturePhoto());
         }
+    }
+    public void Photo()
+    {
+        StartCoroutine(CapturePhoto());
     }
 
     private IEnumerator CapturePhoto()

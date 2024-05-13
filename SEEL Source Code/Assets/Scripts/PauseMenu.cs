@@ -7,15 +7,13 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject background;
     public static bool gameIsPaused = false;
-    public List<GameObject> camButtons;
     public bool curserLock;
-    public List<GameObject> chosenCamButtons;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(gameIsPaused)
+            if (gameIsPaused)
             {
                 Resume();
             }
@@ -28,7 +26,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        if(curserLock)
+        if (curserLock)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
@@ -37,14 +35,8 @@ public class PauseMenu : MonoBehaviour
         background.SetActive(false);
         Time.timeScale = 1;
         gameIsPaused = false;
-        foreach (GameObject ChosenCamButtons in chosenCamButtons.ToArray())
-        {
-            ChosenCamButtons.SetActive(true);
-            camButtons.Add(ChosenCamButtons);
-            chosenCamButtons.Remove(ChosenCamButtons);
-        }
     }
-       
+
     void Pause()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -53,15 +45,5 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         background.SetActive(true);
         gameIsPaused = true;
-        foreach (GameObject CamButtons in camButtons.ToArray())
-        {
-            if (CamButtons.activeInHierarchy)
-            {
-                CamButtons.gameObject.SetActive(false);
-                chosenCamButtons.Add(CamButtons);
-                camButtons.Remove(CamButtons);
-
-            }
-        }
     }
 }

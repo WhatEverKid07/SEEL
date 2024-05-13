@@ -16,15 +16,15 @@ public class VolumeSlider : MonoBehaviour
     public static float SFX_SliderVolumeStatic;
     public static float dialogueVolumeStatic;
 
+    [Header("Starting Value")]
     public  float allAudioSliderVolume;
     public  float musicSliderVolume;
     public  float SFX_SliderVolume;
     public  float dialogueVolume;
+    [Space]
+    [Space]
 
     public AudioMixer musicMixer;
-    //public AudioSource[] allAudioSources; // Array to hold all audio sources
-    //public AudioSource[] music; // Array to hold all audio sources
-    //public AudioSource[] SFX; // Array to hold all audio sources
 
     public bool isGameScene;
 
@@ -32,10 +32,10 @@ public class VolumeSlider : MonoBehaviour
     {
         if (!isGameScene)
         {
-            allSound.value = 1;
-            musicSlider.value = 1;
-            SFX_Slider.value = 1;
-            dialogueSlider.value = 1;
+            allSound.value = allAudioSliderVolume;
+            musicSlider.value = musicSliderVolume;
+            SFX_Slider.value = SFX_SliderVolume;
+            dialogueSlider.value = dialogueVolume;
         }
         else
         {
@@ -49,20 +49,6 @@ public class VolumeSlider : MonoBehaviour
             SFX_Slider.value = SFX_SliderVolumeStatic;
             dialogueSlider.value = dialogueVolumeStatic;
         }
-
-
-        /*
-        //Time.timeScale = 0;
-        allSound.value = 1;
-        musicSlider.value = 1;
-        SFX_Slider.value = 1;
-        allAudioSliderVolume = allSound.value;
-        musicSliderVolume = musicSlider.value;
-        SFX_SliderVolume = SFX_Slider.value;
-        Debug.Log(allAudioSliderVolume);
-        Debug.Log(musicSliderVolume);
-        Debug.Log(SFX_SliderVolume);
-        */
     }
 
 
@@ -82,23 +68,5 @@ public class VolumeSlider : MonoBehaviour
         musicSliderVolume = musicSliderVolumeStatic;
         SFX_SliderVolume = SFX_SliderVolumeStatic;
         dialogueVolume = dialogueVolumeStatic;
-
-        /*
-        foreach (AudioSource source in allAudioSources)
-        {
-            source.volume = allAudioSliderVolume;
-            //Debug.Log("Global Audio" + allAudioSliderVolume);
-        }
-        foreach (AudioSource source in music)
-        {
-            source.volume = musicSliderVolume;
-            //Debug.Log("music Volume" + musicSliderVolume);
-        }
-        foreach (AudioSource source in SFX)
-        {
-            source.volume = SFX_SliderVolume;
-            //Debug.Log("SFX Volume" + SFX_SliderVolume);
-        }
-        */
     }
 }

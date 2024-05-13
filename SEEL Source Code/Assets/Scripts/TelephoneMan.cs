@@ -1,10 +1,14 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class TelephoneMan : MonoBehaviour
 {
     public CamScript cameraScript;
+    public SpeedUpBoss speedUpBoss;
+    public Text spacebarToSpeed;
     public VictimManager victimManager;
     public AudioSource dialouge;
     public GameObject computerScreen;
@@ -44,8 +48,12 @@ public class TelephoneMan : MonoBehaviour
         yield return new WaitForSeconds(boss);
         Debug.Log("PLAY");
         victimManager.gameObject.SetActive(true);
+        speedUpBoss.gameObject.SetActive(false);
+        spacebarToSpeed.gameObject.SetActive(false);
         cameraScript.rightSide = true;
         cameraScript.nothing = false;
         Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 1f;
+        speedUpBoss.audioMixer.SetFloat(speedUpBoss.pitchParameter, 1f);
     }
 }

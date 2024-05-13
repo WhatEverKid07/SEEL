@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -20,6 +21,11 @@ public class VictimManager : MonoBehaviour
     public Transform freedomOutline;
     public Transform prisonOutline;
     public Transform deathOutline;
+
+    [Header("---Money---")]
+    public Text moneyScore;
+    public static int moneyCounterStatic;
+    public int moneyCounter;
 
     [Header("---Other Stuff---")]
     public static int fateNumber;
@@ -105,6 +111,8 @@ public class VictimManager : MonoBehaviour
 
     private void Start()
     {
+        moneyCounter = moneyCounterStatic;
+        moneyScore.text = moneyCounterStatic.ToString("0");
         GameObject randomPerson = SelectRandomPerson();
         currentPerson = randomPerson;
         currentPerson.SetActive(true);
@@ -154,6 +162,7 @@ public class VictimManager : MonoBehaviour
         EveryChoice();
         Debug.Log("Freedom");
         fateNumber += victimData.freedom;
+        moneyCounter += victimData.freedomMoney;
 
         StartCoroutine(VoiceLines());
     }
@@ -169,6 +178,7 @@ public class VictimManager : MonoBehaviour
         EveryChoice();
         Debug.Log("Prison");
         fateNumber += victimData.prison;
+        moneyCounter += victimData.prisonMoney;
 
         StartCoroutine(VoiceLines());
     }
@@ -184,6 +194,7 @@ public class VictimManager : MonoBehaviour
         EveryChoice();
         Debug.Log("Death");
         fateNumber += victimData.death;
+        moneyCounter += victimData.deathMoney;
 
         StartCoroutine(VoiceLines());
     }
@@ -195,6 +206,35 @@ public class VictimManager : MonoBehaviour
         prisonOutline.gameObject.SetActive(false);
         deathOutline.gameObject.SetActive(false);
     }
+
+    private void Update()
+    {
+        /*
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            moneyCounter += 100;
+        }
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            moneyCounter += -100;
+        }
+        */
+
+        if (moneyCounter == moneyCounterStatic)
+        {
+            moneyCounterStatic += 0;
+        }
+        else if (moneyCounter <= moneyCounterStatic)
+        {
+            moneyCounterStatic += -1;
+        }
+        else if (moneyCounter >= moneyCounterStatic)
+        {
+            moneyCounterStatic += 1;
+        }
+        moneyScore.text = moneyCounterStatic.ToString("0");
+    }
+
     IEnumerator VoiceLines()
     {
         yield return new WaitForSeconds(clipLength);

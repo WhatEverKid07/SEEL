@@ -6,7 +6,6 @@ using UnityEngine.Audio;
 public class VictimData : MonoBehaviour
 {
     public VictimManager victimManager;
-    //public AudioSource victimAudioSource;
 
     public GameObject prisonStampPrint;
     public GameObject freedomStampPrint;
@@ -16,27 +15,29 @@ public class VictimData : MonoBehaviour
     public GameObject freedomStampPrintUI;
     public GameObject deathStampPrintUI;
 
-    //public Transform subtitleBackground;
     [Header("Numbers")]
     public int freedom;
     public int prison;
     public int death;
 
+    [HideInInspector]
+    public int freedomMoney;
+    [HideInInspector]
+    public int prisonMoney;
+    [HideInInspector]
+    public int deathMoney;
+
     [Header("Freedom Dialogue")]
     public List<GameObject> freedomDialogue;
-    //public Transform freedomSubtitles;
 
     [Header("Prison Dialogue")]
     public List<GameObject> prisonDialogue;
-    //public Transform prisonSubtitles;
 
     [Header("Death Dialogue")]
     public List<GameObject> deathDialogue;
-    //public Transform deathSubtitles;
 
     private void Start()
     {
-        //victimAudioSource = GetComponent<AudioSource>();
         prisonStampPrint.SetActive(false);
         deathStampPrint.SetActive(false);
         freedomStampPrint.SetActive(false);
@@ -44,5 +45,12 @@ public class VictimData : MonoBehaviour
         prisonStampPrintUI.SetActive(false);
         deathStampPrintUI.SetActive(false);
         freedomStampPrintUI.SetActive(false);
+
+        freedomMoney = freedom * 100;
+        prisonMoney = prison * 100;
+        deathMoney = death * 100;
+        //Debug.Log(freedomMoney);
+        //Debug.Log(prisonMoney);
+        //Debug.Log(deathMoney);
     }
 }
