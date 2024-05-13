@@ -27,10 +27,12 @@ public class NextVictim : MonoBehaviour
         manager.RustyButtonActivate();
         gameObject.SetActive(false);
         buttonHighlightRenderer.material.color = Color.clear;
+        /*
         cameraScript.leftSide = false;
         cameraScript.rightSide = true;
         cameraScript.centre = false;
         cameraScript.RightTurn();
+        */
     }
     private void OnMouseExit()
     {

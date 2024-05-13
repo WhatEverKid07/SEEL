@@ -5,14 +5,25 @@ using UnityEngine;
 public class AnimationPhotoCamera : MonoBehaviour
 {
     public Color outlineRed;
-    public PhotoCamera photoCamera;
+    public PhotoCamera photoCameraScript;
     public Renderer buttonHighlightRenderer;
     public Animator animator;
     public GameObject cameraOutline;
+    public VictimManager victimManager;
 
-    void Start()
+    private void Start()
     {
-        buttonHighlightRenderer = GetComponent<Renderer>();
+        NewCharacter();
+    }
+    public void NewCharacter()
+    {
+        StartCoroutine(Wait());
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1);
+   
     }
 
     private void OnMouseEnter()

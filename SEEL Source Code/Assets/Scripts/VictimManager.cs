@@ -17,6 +17,7 @@ public class VictimManager : MonoBehaviour
     public Document_DrawerAnimationController documentDrawerAnimationController;
     public FadeForNextDay fadeForNextDay;
 
+
     [Header("---Stamp Outline---")]
     public Transform freedomOutline;
     public Transform prisonOutline;

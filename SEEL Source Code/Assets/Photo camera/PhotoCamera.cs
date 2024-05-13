@@ -30,6 +30,7 @@ public class PhotoCamera : MonoBehaviour
 
     private IEnumerator CapturePhoto()
     {
+        Debug.Log("TAKING PHOTO");
         yield return new WaitForEndOfFrame();
 
         RenderTexture.active = renderTexture;
