@@ -9,27 +9,38 @@ public class Target : MonoBehaviour
     public Color outlineRed;
 
     public Renderer buttonHighlightRenderer;
-    public Transform buttonText;
+    public GameObject blankText;
+    public GameObject stampTextforSign;
     
     void Start()
     {
         buttonHighlightRenderer = GetComponent<Renderer>();
+        //blankText.GetComponent<MeshRenderer>().material = originalBlank;
+        //currentStamp = originalBlank;
     }
 
     private void OnMouseEnter()
     {
         buttonHighlightRenderer.material.color = outlineRed;
-        buttonText.gameObject.SetActive(true);
+
+        //currentStamp = stampText;
+        blankText.gameObject.SetActive(false);
+        stampTextforSign.gameObject.SetActive(true);
     }
 
     private void OnMouseExit()
     {
         buttonHighlightRenderer.material.color = Color.clear;
-        buttonText.gameObject.SetActive(false);
+
+        //currentStamp = originalBlank;
+        blankText.gameObject.SetActive(true);
+        stampTextforSign.gameObject.SetActive(false);
     }
 
     private void OnMouseDown()
     {
-        buttonText.gameObject.SetActive(false);
+        //currentStamp = originalBlank;
+        blankText.gameObject.SetActive(true);
+        stampTextforSign.gameObject.SetActive(false);
     }
 }
