@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.4f1 (35713cd46cd7) revision 3502396'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Professional' Language: 'en' Physical Memory: 16295 MB
+OS: 'Windows 11  (10.0.22621) 64bit Professional' Language: 'en' Physical Memory: 32682 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -15,7 +15,7 @@ C:/Users/ecallegari-l2023/Documents/GitHub/SEEL/SEEL Source Code
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52022
+50323
 Successfully changed project path to: C:/Users/ecallegari-l2023/Documents/GitHub/SEEL/SEEL Source Code
 C:/Users/ecallegari-l2023/Documents/GitHub/SEEL/SEEL Source Code
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,11 +49,11 @@ C:/Users/ecallegari-l2023/Documents/GitHub/SEEL/SEEL Source Code
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [18380] Host "[IP] 192.168.104.71 [Port] 0 [Flags] 2 [Guid] 4162897505 [EditorId] 4162897505 [Version] 1048832 [Id] WindowsEditor(7,ELAM-014-5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [3416] Host "[IP] 192.168.102.180 [Port] 0 [Flags] 2 [Guid] 2967414892 [EditorId] 2967414892 [Version] 1048832 [Id] WindowsEditor(7,ELAM-122-142) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [18380] Host "[IP] 192.168.104.71 [Port] 0 [Flags] 2 [Guid] 4162897505 [EditorId] 4162897505 [Version] 1048832 [Id] WindowsEditor(7,ELAM-014-5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [3416] Host "[IP] 192.168.102.180 [Port] 0 [Flags] 2 [Guid] 2967414892 [EditorId] 2967414892 [Version] 1048832 [Id] WindowsEditor(7,ELAM-122-142) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 21.98 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 25.06 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.4f1 (35713cd46cd7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -69,49 +69,49 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56892
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56876
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.009563 seconds.
-- Loaded All Assemblies, in  0.294 seconds
+Registered in 0.009921 seconds.
+- Loaded All Assemblies, in  0.284 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 306 ms
+Android Extension - Scanning For ADB Devices 298 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.579 seconds
-Domain Reload Profiling: 872ms
-	BeginReloadAssembly (90ms)
+- Finished resetting the current domain, in  0.573 seconds
+Domain Reload Profiling: 855ms
+	BeginReloadAssembly (92ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (28ms)
+	RebuildCommonClasses (25ms)
 	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (47ms)
-	LoadAllAssembliesAndSetupDomain (121ms)
-		LoadAssemblies (89ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (109ms)
+		LoadAssemblies (92ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (114ms)
-			TypeCache.Refresh (113ms)
-				TypeCache.ScanAssembly (105ms)
+		AnalyzeDomain (103ms)
+			TypeCache.Refresh (102ms)
+				TypeCache.ScanAssembly (94ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (580ms)
+	FinalizeReload (573ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (538ms)
+		SetupLoadedEditorAssemblies (530ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (409ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (396ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (87ms)
-			ProcessInitializeOnLoadMethodAttributes (37ms)
+			ProcessInitializeOnLoadAttributes (80ms)
+			ProcessInitializeOnLoadMethodAttributes (48ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -119,57 +119,55 @@ Domain Reload Profiling: 872ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file data-000001F2C26CD070 doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\ScriptAssemblies\Assembly-CSharp.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\ecallegari-l2023\Documents\GitHub\SEEL\SEEL Source Code\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.724 seconds
-Refreshing native plugins compatible for Editor in 10.01 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.706 seconds
+Refreshing native plugins compatible for Editor in 9.96 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.432 seconds
-Domain Reload Profiling: 1153ms
+- Finished resetting the current domain, in  0.439 seconds
+Domain Reload Profiling: 1143ms
 	BeginReloadAssembly (138ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (20ms)
-	RebuildCommonClasses (27ms)
+		CreateAndSetChildDomain (18ms)
+	RebuildCommonClasses (31ms)
 	RebuildNativeTypeToScriptingClass (8ms)
 	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (505ms)
-		LoadAssemblies (325ms)
+	LoadAllAssembliesAndSetupDomain (483ms)
+		LoadAssemblies (320ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (261ms)
-			TypeCache.Refresh (242ms)
-				TypeCache.ScanAssembly (230ms)
-			ScanForSourceGeneratedMonoScriptInfo (14ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (432ms)
+		AnalyzeDomain (246ms)
+			TypeCache.Refresh (231ms)
+				TypeCache.ScanAssembly (219ms)
+			ScanForSourceGeneratedMonoScriptInfo (11ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (440ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (299ms)
+		SetupLoadedEditorAssemblies (311ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (21ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (56ms)
-			ProcessInitializeOnLoadAttributes (198ms)
+			BeforeProcessingInitializeOnLoad (62ms)
+			ProcessInitializeOnLoadAttributes (206ms)
 			ProcessInitializeOnLoadMethodAttributes (14ms)
 			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 9.75 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 10.77 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3490 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 64 unused Assets / (1.4 MB). Loaded Objects now: 3943.
 Memory consumption went from 222.2 MB to 220.8 MB.
-Total: 2.866300 ms (FindLiveObjects: 0.244300 ms CreateObjectMapping: 0.153800 ms MarkObjects: 2.126100 ms  DeleteObjects: 0.341500 ms)
+Total: 3.028900 ms (FindLiveObjects: 0.189200 ms CreateObjectMapping: 0.116600 ms MarkObjects: 2.435100 ms  DeleteObjects: 0.287200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -185,20 +183,100 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 5572.640338 seconds.
+  Time since last request: 401.472531 seconds.
   path: Assets/Audio Mixer.mixer
   artifactKey: Guid(667a00b3b830208408ba96d9ecb3a51a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio Mixer.mixer using Guid(667a00b3b830208408ba96d9ecb3a51a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd5f39fd8bd068900865bc3a81350fe7') in 0.009775 seconds
+Start importing Assets/Audio Mixer.mixer using Guid(667a00b3b830208408ba96d9ecb3a51a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9587102893a799a92a655aa706b9bdb') in 0.009767 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 10
 ========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/SharpCurve.ttf
+  artifactKey: Guid(4e20d000172a0044c8902bcf218ea973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SharpCurve.ttf using Guid(4e20d000172a0044c8902bcf218ea973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37897ccf691d22812249be7737c95d18') in 0.060263 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 62.149189 seconds.
+  path: Assets/drive-download-20240514T103249Z-001
+  artifactKey: Guid(ce3e095e47121ec47a1b2241bc94d242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/drive-download-20240514T103249Z-001 using Guid(ce3e095e47121ec47a1b2241bc94d242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ef8f3b31f4e92dc1f3df2efbdef36b0') in 0.000519 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.035479 seconds.
+  path: Assets/drive-download-20240514T103249Z-001/sign blank.png
+  artifactKey: Guid(70767b4b70623e94c8d13ea67afae985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/drive-download-20240514T103249Z-001/sign blank.png using Guid(70767b4b70623e94c8d13ea67afae985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f8fb713b0f6ff83806e454ca38145da') in 0.008137 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.003115 seconds.
+  path: Assets/drive-download-20240514T103249Z-001/sign day 3.png
+  artifactKey: Guid(7fe657f45dd3b57438a36c6bca6051f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/drive-download-20240514T103249Z-001/sign day 3.png using Guid(7fe657f45dd3b57438a36c6bca6051f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '888366088f071a150bd5d196af501ff2') in 0.007360 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/drive-download-20240514T103249Z-001/sign execution.png
+  artifactKey: Guid(2160df7af9245a740b0da6f45e66af09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/drive-download-20240514T103249Z-001/sign execution.png using Guid(2160df7af9245a740b0da6f45e66af09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e1f468a013b638085de427c5d056ecf') in 0.006349 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000011 seconds.
+  path: Assets/drive-download-20240514T103249Z-001/sign freedom.png
+  artifactKey: Guid(9794d522f10e00f44b0ec8093cbe550d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/drive-download-20240514T103249Z-001/sign freedom.png using Guid(9794d522f10e00f44b0ec8093cbe550d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65c71de90dc6f963f51b88abf74dd97e') in 0.006799 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000011 seconds.
+  path: Assets/drive-download-20240514T103249Z-001/sign day 2.png
+  artifactKey: Guid(d1e5ad77d71d6b2459e92919ae13dada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/drive-download-20240514T103249Z-001/sign day 2.png using Guid(d1e5ad77d71d6b2459e92919ae13dada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '030b24ef387f014189204082de2216be') in 0.007763 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/drive-download-20240514T103249Z-001/sign detain.png
+  artifactKey: Guid(977d1976aeed6db42a7b5e63a8cfa3b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/drive-download-20240514T103249Z-001/sign detain.png using Guid(977d1976aeed6db42a7b5e63a8cfa3b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '682db98f4a79aa23cbacce5e0a77012f') in 0.006105 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 12.856027 seconds.
+  path: Assets/drive-download-20240514T100752Z-001/vincent debarion freedom finished .mp3
+  artifactKey: Guid(257872f0c4502d542aa69aae701b9717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/drive-download-20240514T100752Z-001/vincent debarion freedom finished .mp3 using Guid(257872f0c4502d542aa69aae701b9717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f908f89fef38359f16fc59e574079c9') in 0.022582 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 2.128233 seconds.
+  path: Assets/drive-download-20240514T100746Z-001/Kai ree Freedom finished.mp3
+  artifactKey: Guid(96d507db95d5fc24f9fa3abd61483540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/drive-download-20240514T100746Z-001/Kai ree Freedom finished.mp3 using Guid(96d507db95d5fc24f9fa3abd61483540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beb1c7c1f3ee3fb32f071e7882455e9e') in 0.007921 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 8.86 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 10.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 14 unused Assets / (1.3 MB). Loaded Objects now: 3944.
-Memory consumption went from 156.3 MB to 155.0 MB.
-Total: 3.493100 ms (FindLiveObjects: 0.200300 ms CreateObjectMapping: 0.124600 ms MarkObjects: 2.947400 ms  DeleteObjects: 0.220100 ms)
+Unloading 14 unused Assets / (1.3 MB). Loaded Objects now: 3992.
+Memory consumption went from 157.1 MB to 155.8 MB.
+Total: 4.459600 ms (FindLiveObjects: 0.211500 ms CreateObjectMapping: 0.123100 ms MarkObjects: 3.919900 ms  DeleteObjects: 0.204400 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -216,9 +294,38 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 333.264199 seconds.
-  path: Assets/DAYONE.fbx
-  artifactKey: Guid(62daf58264fbbc5439a2b3dd599c83d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DAYONE.fbx using Guid(62daf58264fbbc5439a2b3dd599c83d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d70c40516731d743d812b6f5b52e2ea') in 0.101165 seconds
+  Time since last request: 84.650142 seconds.
+  path: Assets/drive-download-20240514T103249Z-001/sign blank.png
+  artifactKey: Guid(70767b4b70623e94c8d13ea67afae985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/drive-download-20240514T103249Z-001/sign blank.png using Guid(70767b4b70623e94c8d13ea67afae985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22e004061d225ef8cc764cc9ba24792b') in 0.010434 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/drive-download-20240514T103249Z-001/sign execution.png
+  artifactKey: Guid(2160df7af9245a740b0da6f45e66af09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/drive-download-20240514T103249Z-001/sign execution.png using Guid(2160df7af9245a740b0da6f45e66af09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8619d2afb8c4c18f80e0ed0ad5dad0c') in 0.008954 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/drive-download-20240514T103249Z-001/sign day 3.png
+  artifactKey: Guid(7fe657f45dd3b57438a36c6bca6051f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/drive-download-20240514T103249Z-001/sign day 3.png using Guid(7fe657f45dd3b57438a36c6bca6051f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3cf6e30e4cbab7d63221e29ef5cb889') in 0.010091 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/drive-download-20240514T103249Z-001/sign day 1.png
+  artifactKey: Guid(551f464b770684244a9011ff1e8b4eed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/drive-download-20240514T103249Z-001/sign day 1.png using Guid(551f464b770684244a9011ff1e8b4eed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '190ee84607d651af06049128822090da') in 0.026233 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

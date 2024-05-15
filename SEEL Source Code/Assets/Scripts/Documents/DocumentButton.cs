@@ -7,6 +7,7 @@ public class DocumentButton : MonoBehaviour
     private Renderer documentButton;
     public Animator documentAnimator;
     public Transform documentUI;
+    public GameObject hideStampBackground;
     public AudioSource documentShuffle;
 
     public GameObject[] camButtons;
@@ -35,6 +36,7 @@ public class DocumentButton : MonoBehaviour
             button.SetActive(false);
         }
         documentUI.gameObject.SetActive(true);
+        hideStampBackground.SetActive(true);
         documentButton.material.color = Color.clear;
         //StartCoroutine(OpenUI());
     }
