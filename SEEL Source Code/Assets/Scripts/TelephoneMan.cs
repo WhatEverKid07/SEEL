@@ -13,6 +13,7 @@ public class TelephoneMan : MonoBehaviour
     public AudioSource dialouge;
     public GameObject computerScreen;
     public float boss;
+    public PauseMenu pauseMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,5 +56,6 @@ public class TelephoneMan : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 1f;
         speedUpBoss.audioMixer.SetFloat(speedUpBoss.pitchParameter, 1f);
+        pauseMenu.curserLock = false;
     }
 }
