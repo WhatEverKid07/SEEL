@@ -21,6 +21,7 @@ public class MainMenu : MonoBehaviour
         nextDay.SetActive(true);
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(gameScene);
+        Debug.Log("START");
     }
     public void QuitGame()
     {
