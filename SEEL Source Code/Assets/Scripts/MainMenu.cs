@@ -10,6 +10,10 @@ public class MainMenu : MonoBehaviour
     public GameObject nextDay;
     public FadeForNextDay fadeForNextDay;
 
+    private void Start()
+    {
+        VictimManager.fateNumber = 0;
+    }
     public void StartGame()
     {
         fadeForNextDay.BlackOut();

@@ -35,6 +35,7 @@ public class VictimManager : MonoBehaviour
     public float afterChoicePause;
     private float clipLength;
     public GameObject nextDay;
+    public bool resetFateNumber = false;
 
     private GameObject chosenFreedomDialouge;
     private GameObject chosenPrisonDialouge;
@@ -112,6 +113,11 @@ public class VictimManager : MonoBehaviour
 
     private void Start()
     {
+        if (resetFateNumber)
+        {
+            fateNumber = 0;
+            moneyCounterStatic = 0;
+        }
         moneyCounter = moneyCounterStatic;
         moneyScore.text = moneyCounterStatic.ToString("0");
         GameObject randomPerson = SelectRandomPerson();

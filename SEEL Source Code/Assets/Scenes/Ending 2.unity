@@ -4238,7 +4238,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineRed: {r: 0.6698113, g: 0, b: 0, a: 0.39215687}
   buttonHighlightRenderer: {fileID: 0}
-  buttonText: {fileID: 1858195553}
+  blankText: {fileID: 0}
+  stampTextforSign: {fileID: 0}
 --- !u!65 &435626127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10132,9 +10133,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6a8b294cacdcfff429b274330f8c045d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 580852121}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6a8b294cacdcfff429b274330f8c045d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1351648620}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a8b294cacdcfff429b274330f8c045d, type: 3}
 --- !u!4 &831697346 stripped
@@ -13094,7 +13092,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1351648621}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ComputerScript, Assembly-CSharp
         m_MethodName: LeavePCScreen
         m_Mode: 1
@@ -13209,7 +13207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineRed: {r: 0.6698113, g: 0, b: 0, a: 0.39215687}
   buttonHighlightRenderer: {fileID: 0}
-  buttonText: {fileID: 2125839630}
+  blankText: {fileID: 0}
+  stampTextforSign: {fileID: 0}
 --- !u!65 &1062405694
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18120,131 +18119,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subtitle: {fileID: 505914160}
   dialogue: {fileID: 1350166531}
---- !u!1 &1351648619
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1351648620}
-  - component: {fileID: 1351648624}
-  - component: {fileID: 1351648623}
-  - component: {fileID: 1351648622}
-  - component: {fileID: 1351648621}
-  m_Layer: 0
-  m_Name: Computer Outline
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1351648620
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351648619}
-  m_LocalRotation: {x: -0, y: 0.7092323, z: -0, w: 0.70497495}
-  m_LocalPosition: {x: -0.011, y: 0.0136, z: -0.0045}
-  m_LocalScale: {x: 0.03198972, y: 0.032176927, z: 0.035608843}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 831697346}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 90.345, z: 0}
---- !u!114 &1351648621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351648619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce645443e75dd794988770819301e7fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineRed: {r: 0.67058825, g: 0, b: 0, a: 0.39215687}
-  buttonHighlightRenderer: {fileID: 1351648623}
-  computerScreen: {fileID: 580852121}
-  camButtons:
-  - {fileID: 987485453}
-  leavePCButton: {fileID: 1886116877}
-  openSFX: {fileID: 671955561}
---- !u!65 &1351648622
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351648619}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1351648623
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351648619}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: ae161d9b48da22b439d7b8d64951e9fb, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1351648624
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351648619}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1357413551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19719,7 +19593,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineRed: {r: 0.6698113, g: 0, b: 0, a: 0.39215687}
   buttonHighlightRenderer: {fileID: 0}
-  buttonText: {fileID: 1505753017}
+  blankText: {fileID: 0}
+  stampTextforSign: {fileID: 0}
 --- !u!65 &1478703952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20588,6 +20463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   documentAnimator: {fileID: 564417729}
   documentUI: {fileID: 1596142384}
+  hideStampBackground: {fileID: 0}
   documentShuffle: {fileID: 106131384}
   camButtons:
   - {fileID: 923015307}
@@ -22925,6 +22801,7 @@ MonoBehaviour:
   rightDoorPauseDuration: 4
   afterChoicePause: 1
   nextDay: {fileID: 974936220}
+  resetFateNumber: 0
   rustyButtonOutlineForNextPerson: {fileID: 989247953}
   currentPerson: {fileID: 0}
   victimAnimatorController: {fileID: 0}
@@ -24403,6 +24280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   documentAnimator: {fileID: 564417729}
   documentUI: {fileID: 0}
+  hideStampOutline: {fileID: 0}
   camButtons:
   - {fileID: 923015307}
   - {fileID: 1091661152}
